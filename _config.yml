@@ -113,23 +113,19 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Name"
+  name             : "Eduardo Rivera"
   avatar           : "/assets/images/bio-photo.jpg"
-  bio              : "I am an **amazing** person."
-  location         : "Somewhere"
+  bio              : "Ingeniero en computacion "
   links:
-    - label: "Your Website"
+    - label: "Mi blog"
       icon: "fas fa-fw fa-link"
-      url: "https://your-site.com"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/"
+      url: "https://eduardo99rp.github.io/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
+      url: "https://github.com/Eduardo99RP"
+    - label: "Linkedin"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/juan-eduardo-rivera-p%C3%A9rez-a76909226/"
 
 
 # Site Footer
