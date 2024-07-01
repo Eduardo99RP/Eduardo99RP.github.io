@@ -1,1 +1,94 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-06-30T16:40:26-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">BlogPersonal</title><subtitle>post de proyectos</subtitle><author><name>Eduardo Rivera</name></author></feed>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-06-30T19:54:53-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">BlogPersonal</title><subtitle>post de proyectos</subtitle><author><name>Eduardo Rivera</name></author><entry><title type="html">Maquina Headless</title><link href="http://localhost:4000/hackthebox/Maquina-Headless/" rel="alternate" type="text/html" title="Maquina Headless" /><published>2024-06-30T00:00:00-06:00</published><updated>2024-06-30T00:00:00-06:00</updated><id>http://localhost:4000/hackthebox/Maquina-Headless</id><content type="html" xml:base="http://localhost:4000/hackthebox/Maquina-Headless/"><![CDATA[<p align="center">
+<img src="/assets/images/MaquinaHeadless/Aspose.Words.c51fa9d9-6a10-477b-b35c-8f7240e81596.001.png" />
+</p>
+
+<h1 id="maquina-headless"><strong>Maquina Headless</strong></h1>
+
+<p>En esta máquina primero que nada se tuvo que hacer un análisis para poder obtener información sobre los puertos que estaba abierto para ello se llevó a cabo el uso NMAP, en el cual se hace con el siguiente comando:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nmap <span class="nt">-p-</span> <span class="nt">-sC</span> <span class="nt">-vvv</span> –min-rate 5000 <span class="nt">-n</span> 10.10.11.8 
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p><strong>-p-</strong>: Este parámetro indica que Nmap debe escanear todos los puertos, del 1 al 65535. Normalmente, Nmap escanea solo los 1000 puertos más comunes si no se especifica ningún rango de puertos.</p>
+  </li>
+  <li>
+    <p><strong>-sC</strong>: Este parámetro habilita el uso de los scripts Nmap Scripting Engine (NSE) con la opción de script predeterminado. Los scripts NSE pueden realizar una variedad de tareas, como la detección de versiones de servicios y la identificación de vulnerabilidades.</p>
+  </li>
+  <li>
+    <p><strong>-vvv</strong>: Este parámetro aumenta la verbosidad del escaneo, proporcionando información detallada sobre el progreso del escaneo y los resultados. Cuantos más “v” se añadan, más detallada será la salida.</p>
+  </li>
+  <li>
+    <p><strong>–-min-rate 5000</strong>: Este parámetro establece la tasa mínima de paquetes por segundo que Nmap debería enviar, en este caso, 5000 paquetes por segundo. Esto hace que el escaneo sea más rápido, pero puede generar tráfico de red considerable y posiblemente ser detectado como un comportamiento sospechoso por sistemas de detección de intrusos (IDS).</p>
+  </li>
+  <li>
+    <p><strong>-n</strong>: Este parámetro deshabilita la resolución de nombres de dominio inversa. Esto significa que Nmap no intentará resolver direcciones IP a nombres de host, lo que puede acelerar el escaneo.</p>
+  </li>
+</ul>
+
+<p><strong>Resultados obtenidos:</strong></p>
+
+<p align="center">
+<img src="/assets/images/MaquinaHeadless/Aspose.Words.c51fa9d9-6a10-477b-b35c-8f7240e81596.002.png" />
+</p>
+
+<p>En la captura podemos ver que solo tenemos abiertos dos puertos el cual uno es el puerto 22 y el otro el 5000, cual sabemos las siguientes características:</p>
+
+<p><strong>Puerto 22</strong></p>
+
+<ul>
+  <li><strong>Protocolo:</strong> TCP</li>
+  <li><strong>Servicio común:</strong> SSH (Secure Shell)</li>
+  <li><a name="_int_ahikk2d5"></a><strong>Uso principal:</strong> El puerto 22 es conocido por el protocolo SSH, que proporciona una forma segura de conectarse a otro ordenador a través de una red no segura. SSH permite el acceso remoto a servidores, la transferencia segura de archivos mediante SCP (Secure Copy) y SFTP (SSH File Transfer Protocol), así como la ejecución remota de comandos. SSH es esencial en la administración de sistemas y servidores, especialmente en entornos Linux y Unix.</li>
+</ul>
+
+<p><strong>Puerto 5000</strong></p>
+
+<ul>
+  <li><strong>Protocolo:</strong> TCP/UDP</li>
+  <li><strong>Servicios comunes:</strong>
+    <ul>
+      <li><strong>UPnP (Universal Plug and Play):</strong> Este protocolo, utilizado principalmente en redes domésticas, permite que dispositivos en una red se descubran y se comuniquen automáticamente entre sí. UPnP facilita la configuración de redes y la conectividad entre dispositivos sin intervención manual significativa.</li>
+      <li><strong>Docker:</strong> En el contexto de Docker, un sistema de contenedores de aplicaciones, el puerto 5000 se usa comúnmente como el puerto predeterminado para el registro privado de Docker (Docker Registry). Un Docker Registry es un repositorio para almacenar y distribuir imágenes Docker.</li>
+      <li><strong>Flask:</strong> En el desarrollo web con Python, el marco Flask puede usar el puerto 5000 como su puerto predeterminado para ejecutar aplicaciones web durante el desarrollo.</li>
+    </ul>
+  </li>
+  <li><strong>Uso principal:</strong> Dado que el puerto 5000 no está asignado de manera oficial a un servicio específico por la IANA (Internet Assigned Numbers Authority), puede ser utilizado por diferentes aplicaciones y servicios según las necesidades de los usuarios y desarrolladores. Sin embargo, los usos mencionados arriba son algunos de los más comunes.</li>
+</ul>
+
+<p>A continuación, procedemos a obtener más información de los puertos usando nmap esto se hace principalmente para que no se demore demasiado tiempo en obtener la información:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nmap <span class="nt">-p22</span>,5000 <span class="nt">-A</span> <span class="nt">-Pn</span> <span class="nt">-vvv</span> 10.10.11.8
+</code></pre></div></div>
+
+<ul>
+  <li><strong>-p22,5000</strong>: Esta opción especifica los puertos que deseas escanear. En este caso, Nmap escaneará los puertos 22 (usualmente usado por SSH) y 5000. Puedes especificar un rango de puertos o una lista separada por comas.</li>
+  <li><strong>-A</strong>: Esta opción activa la detección avanzada. Incluirá:
+    <ol>
+      <li>Detección de sistema operativo.</li>
+      <li>Detección de versión de servicio.</li>
+      <li>Escaneo de scripts.</li>
+      <li>Rastreo de ruta (traceroute).</li>
+    </ol>
+  </li>
+  <li><strong>-Pn</strong>: Esta opción le dice a Nmap que no haga un “ping” previo a los hosts para ver si están activos. Por defecto, Nmap hace un ping para determinar si un host está activo antes de escanearlo. Con -Pn, Nmap escaneará los puertos incluso si el host no responde a los pings.</li>
+</ul>
+
+<p align="center">
+<img src="/assets/images/MaquinaHeadless/Aspose.Words.c51fa9d9-6a10-477b-b35c-8f7240e81596.005.png" />
+</p>
+
+<p>En esta captura podemos ver algo interesante, primero que nada, podemos ver que en el puerto 22 si bien nos muestra la versión en el cual está trabajando el problema radica que no hay vulnerabilidad aparente, es decir si va al internet no hay ningún tipo de exploit que se puede usar para conectarse, así que el único puerto que queda disponible es el 5000 sin embargo este solo se usa para alojar el acceso a la página web así que no hay manera de explotar una vulnerabilidad.</p>
+
+<p>Solo queda ingresar a la página:</p>
+
+<p align="center">
+<img src="/assets/images/MaquinaHeadless/Aspose.Words.c51fa9d9-6a10-477b-b35c-8f7240e81596.004.png" />
+</p>
+
+<p>En este caso procedemos a buscar páginas que puedan estar ocultas apartir de la URL, para eso usamos FUZZ</p>
+
+<p align="center">
+<img src="/assets/images/MaquinaHeadless/Aspose.Words.c51fa9d9-6a10-477b-b35c-8f7240e81596.003.png" />
+</p>]]></content><author><name>Eduardo Rivera</name></author><category term="HackTheBox" /><category term="puerto 5000" /><category term="nmap" /><summary type="html"><![CDATA[Abordando el desafío de la máquina Headless en HackTheBox: una intrigante aventura que, aunque aparentemente sencilla, esconde múltiples desafíos y lecciones clave.]]></summary></entry></feed>
