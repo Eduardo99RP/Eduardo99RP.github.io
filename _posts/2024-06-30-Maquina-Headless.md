@@ -20,7 +20,7 @@ tags:
 </p>
 
 
-# **Maquina Headless**
+
 
 En esta máquina primero que nada se tuvo que hacer un análisis para poder obtener información sobre los puertos que estaba abierto para ello se llevó a cabo el uso NMAP, en el cual se hace con el siguiente comando:
 
