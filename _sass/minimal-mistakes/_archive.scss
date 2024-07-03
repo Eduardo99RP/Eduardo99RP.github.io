@@ -32,11 +32,11 @@
 }
 
 .archive__subtitle {
-  margin: 1.414em 0 0.5em;
-  padding-bottom: 0.5em;
-  font-size: $type-size-5;
+  margin: 1.0em 0 0.5em;
+  padding-bottom: 0.3em;
+  font-size: $type-size-4;
   color: $muted-text-color;
-  border-bottom: 1px solid $border-color;
+  border-bottom: 3px solid $border-color;
 
   + .list__item .archive__item-title {
     margin-top: 0.5em;
@@ -44,7 +44,7 @@
 }
 
 .archive__item-title {
-  margin-bottom: 0.25em;
+  margin-bottom: 0.3em;
   font-family: $sans-serif-narrow;
   line-height: initial;
   overflow: hidden;
@@ -127,7 +127,7 @@
 .list__item {
   .page__meta {
     margin: 0 0 4px;
-    font-size: 0.6em;
+    font-size: 0.7em;
   }
 }
 
