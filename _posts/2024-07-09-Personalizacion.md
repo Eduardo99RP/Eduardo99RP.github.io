@@ -1,7 +1,7 @@
 ---
 layout: single
-title: Personalizacion de un entorno de trabajo Linux
-excerpt: "En este post es mi personalizacion personal de un sistema operativo linux de las herramientas mas usadas y las mas comodas"
+title: Personalización de un entorno de trabajo Linux.
+excerpt: "En este post es mi personalización personal de un sistema operativo Linux de las herramientas más usadas y las más cómodas."
 date: 2024-07-9
 classes: wide
 header:
@@ -83,13 +83,33 @@ plugins=(git
 
 
 
-## Alias de cat 
+## Alias de bat
+En este caso se utiliza la herramienta [bat](https://github.com/sharkdp/bat) el cual tiene una funcion parcida al comando cat, sin embargo este tiene una presentacion mas elegante y mas visual, por lo cual se obta por modificar el comando cat usando el alias en ```.zshrc```
 
+Para la instalcion de este herramineta se puede instalar con el siguiente comando 
+```sh
+sudo apt install bat
+```
+o bien se puede descargar la [ultima version](https://github.com/sharkdp/bat/releases/tag/v0.24.0) para ello se instala de la siguiente manera
+```sh
+sudo apt install ./nombre_del_archivo.deb
+```
+Dentro del archivo ```.zshrc``` se agrega el siguiente alias: 
 ```sh
 alias cat='/bin/bat'
 alias catn='/bin/cat'
 alias  catln='/bin/bat --paging=never'
 ```
+Asi es como se ve nuestra terminal usando esta herramienta:
+<p align="center">
+<img src="/assets/images/PersonalizacionLinux/batcat.png">
+</p>
+En algunos caso se necesita copiar cosas de la terminal asi que para eso se configuro otro alias como catn
+<p align="center">
+<img src="/assets/images/PersonalizacionLinux/batcat2.png">
+</p>
+
+
 
 ## Alias de lsb
 
