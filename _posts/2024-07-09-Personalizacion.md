@@ -84,13 +84,13 @@ plugins=(git
 
 
 ## Alias de bat
-En este caso se utiliza la herramienta [bat](https://github.com/sharkdp/bat) el cual tiene una funcion parcida al comando cat, sin embargo este tiene una presentacion mas elegante y mas visual, por lo cual se obta por modificar el comando cat usando el alias en ```.zshrc```
+En este caso se utiliza la herramienta [bat](https://github.com/sharkdp/bat) la cual tiene una función parecida al comando cat, sin embargo, este tiene una presentación más elegante y más visual, por lo cual se opta por modificar el comando cat usando el alias en ```.zshrc```
 
-Para la instalcion de este herramineta se puede instalar con el siguiente comando 
+Para la instalación de esta herramienta se puede instalar con el siguiente comando. 
 ```sh
 sudo apt install bat
 ```
-o bien se puede descargar la [ultima version](https://github.com/sharkdp/bat/releases/tag/v0.24.0) para ello se instala de la siguiente manera
+o bien se puede descargar la [última versión](https://github.com/sharkdp/bat/releases/tag/v0.24.0) para ello se instala de la siguiente manera.
 ```sh
 sudo apt install ./nombre_del_archivo.deb
 ```
@@ -100,15 +100,14 @@ alias cat='/bin/bat'
 alias catn='/bin/cat'
 alias  catln='/bin/bat --paging=never'
 ```
-Asi es como se ve nuestra terminal usando esta herramienta:
+Así es como se ve nuestra terminal usando esta herramienta:
 <p align="center">
 <img src="/assets/images/PersonalizacionLinux/batcat.png">
 </p>
-En algunos caso se necesita copiar cosas de la terminal asi que para eso se configuro otro alias como catn
+En algunos casos se necesita copiar cosas de la terminal, así que para eso se configuró otro alias como catn
 <p align="center">
 <img src="/assets/images/PersonalizacionLinux/batcat2.png">
 </p>
-
 
 
 ## Alias de lsb

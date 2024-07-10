@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-07-09T19:08:12-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">BlogPersonal</title><subtitle>post de proyectos</subtitle><author><name>Eduardo Rivera</name></author><entry><title type="html">Personalización de un entorno de trabajo Linux.</title><link href="http://localhost:4000/linux/Personalizacion/" rel="alternate" type="text/html" title="Personalización de un entorno de trabajo Linux." /><published>2024-07-09T00:00:00-06:00</published><updated>2024-07-09T00:00:00-06:00</updated><id>http://localhost:4000/linux/Personalizacion</id><content type="html" xml:base="http://localhost:4000/linux/Personalizacion/"><![CDATA[<h1 id="personalización-de-linux">Personalización de Linux</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-07-09T19:14:38-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">BlogPersonal</title><subtitle>post de proyectos</subtitle><author><name>Eduardo Rivera</name></author><entry><title type="html">Personalización de un entorno de trabajo Linux.</title><link href="http://localhost:4000/linux/Personalizacion/" rel="alternate" type="text/html" title="Personalización de un entorno de trabajo Linux." /><published>2024-07-09T00:00:00-06:00</published><updated>2024-07-09T00:00:00-06:00</updated><id>http://localhost:4000/linux/Personalizacion</id><content type="html" xml:base="http://localhost:4000/linux/Personalizacion/"><![CDATA[<h1 id="personalización-de-linux">Personalización de Linux</h1>
 <p>Instalación de  <a href="https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH">ZSH</a> para eso vamos a usar el siguiente comando:</p>
 
 <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apt <span class="nb">install </span>zsh
@@ -67,12 +67,12 @@
 </code></pre></div></div>
 
 <h2 id="alias-de-bat">Alias de bat</h2>
-<p>En este caso se utiliza la herramienta <a href="https://github.com/sharkdp/bat">bat</a> el cual tiene una funcion parcida al comando cat, sin embargo este tiene una presentacion mas elegante y mas visual, por lo cual se obta por modificar el comando cat usando el alias en <code class="language-plaintext highlighter-rouge">.zshrc</code></p>
+<p>En este caso se utiliza la herramienta <a href="https://github.com/sharkdp/bat">bat</a> la cual tiene una función parecida al comando cat, sin embargo, este tiene una presentación más elegante y más visual, por lo cual se opta por modificar el comando cat usando el alias en <code class="language-plaintext highlighter-rouge">.zshrc</code></p>
 
-<p>Para la instalcion de este herramineta se puede instalar con el siguiente comando</p>
+<p>Para la instalación de esta herramienta se puede instalar con el siguiente comando.</p>
 <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt <span class="nb">install </span>bat
 </code></pre></div></div>
-<p>o bien se puede descargar la <a href="https://github.com/sharkdp/bat/releases/tag/v0.24.0">ultima version</a> para ello se instala de la siguiente manera</p>
+<p>o bien se puede descargar la <a href="https://github.com/sharkdp/bat/releases/tag/v0.24.0">última versión</a> para ello se instala de la siguiente manera.</p>
 <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt <span class="nb">install</span> ./nombre_del_archivo.deb
 </code></pre></div></div>
 <p>Dentro del archivo <code class="language-plaintext highlighter-rouge">.zshrc</code> se agrega el siguiente alias:</p>
@@ -80,11 +80,11 @@
 <span class="nb">alias </span><span class="nv">catn</span><span class="o">=</span><span class="s1">'/bin/cat'</span>
 <span class="nb">alias  </span><span class="nv">catln</span><span class="o">=</span><span class="s1">'/bin/bat --paging=never'</span>
 </code></pre></div></div>
-<p>Asi es como se ve nuestra terminal usando esta herramienta:</p>
+<p>Así es como se ve nuestra terminal usando esta herramienta:</p>
 <p align="center">
 <img src="/assets/images/PersonalizacionLinux/batcat.png" />
 </p>
-<p>En algunos caso se necesita copiar cosas de la terminal asi que para eso se configuro otro alias como catn</p>
+<p>En algunos casos se necesita copiar cosas de la terminal, así que para eso se configuró otro alias como catn</p>
 <p align="center">
 <img src="/assets/images/PersonalizacionLinux/batcat2.png" />
 </p>
