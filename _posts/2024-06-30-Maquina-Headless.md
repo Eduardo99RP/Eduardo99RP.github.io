@@ -1,6 +1,6 @@
 ﻿---
 layout: single
-title: Maquina Headless
+title: Máquina Headless de HackTheBox con dificultad fácil 
 excerpt: "Abordando el desafío de la máquina Headless en HackTheBox: una intrigante aventura que, aunque aparentemente sencilla, esconde múltiples desafíos y lecciones clave."
 date: 2024-06-30
 classes: wide
