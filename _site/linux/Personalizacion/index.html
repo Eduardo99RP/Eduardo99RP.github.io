@@ -279,7 +279,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          5 minuto(s) de lectura
+          1 minuto(s) de lectura
         
       </span>
     
@@ -393,104 +393,20 @@
 
 <h2 id="configuración-personal-de-zshrc">Configuración personal de .zshrc</h2>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.</span>
-<span class="c"># Initialization code that may require console input (password prompts, [y/n]</span>
-<span class="c"># confirmations, etc.) must go above this block; everything else may go below.</span>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 <span class="k">if</span> <span class="o">[[</span> <span class="nt">-r</span> <span class="s2">"</span><span class="k">${</span><span class="nv">XDG_CACHE_HOME</span><span class="k">:-</span><span class="nv">$HOME</span><span class="p">/.cache</span><span class="k">}</span><span class="s2">/p10k-instant-prompt-</span><span class="k">${</span><span class="p">(%)</span><span class="k">:-</span><span class="p">%n</span><span class="k">}</span><span class="s2">.zsh"</span> <span class="o">]]</span><span class="p">;</span> <span class="k">then
   </span><span class="nb">source</span> <span class="s2">"</span><span class="k">${</span><span class="nv">XDG_CACHE_HOME</span><span class="k">:-</span><span class="nv">$HOME</span><span class="p">/.cache</span><span class="k">}</span><span class="s2">/p10k-instant-prompt-</span><span class="k">${</span><span class="p">(%)</span><span class="k">:-</span><span class="p">%n</span><span class="k">}</span><span class="s2">.zsh"</span>
-<span class="k">fi</span>
+<span class="k">fi
 
-<span class="c"># If you come from bash you might have to change your $PATH.</span>
-<span class="c"># export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH</span>
+</span><span class="nb">export </span><span class="nv">ZSH</span><span class="o">=</span><span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/.oh-my-zsh"</span>
 
-<span class="c"># Path to your oh-my-zsh installation.</span>
-<span class="nb">export </span><span class="nv">ZSH</span><span class="o">=</span><span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/.oh-my-zsh"</span>
-
-<span class="c"># Set name of the theme to load --- if set to "random", it will</span>
-<span class="c"># load a random theme each time oh-my-zsh is loaded, in which case,</span>
-<span class="c"># to know which specific one was loaded, run: echo $RANDOM_THEME</span>
-<span class="c"># See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes</span>
 <span class="nv">ZSH_THEME</span><span class="o">=</span><span class="s2">"powerlevel10k/powerlevel10k"</span>
 
 <span class="c">#alias </span>
 <span class="nb">alias cat</span><span class="o">=</span><span class="s1">'/bin/bat'</span>
 <span class="nb">alias </span><span class="nv">catn</span><span class="o">=</span><span class="s1">'/bin/cat'</span>
 <span class="nb">alias  </span><span class="nv">catln</span><span class="o">=</span><span class="s1">'/bin/bat --paging=never'</span>
-<span class="c">#configuracion de lsd -&gt; ls</span>
-<span class="c">#alias ll='/usr/bin/lsd -lh --group-dirs=first'</span>
-<span class="c">#alias la='/usr/bin/lsd -a --group-dirs=first'</span>
-<span class="c">#alias l='/usr/bin/lsd --group-dirs=first'</span>
-<span class="c">#alias lla='/usr/bin/lsd -lha --group-dirs=first'</span>
-<span class="c">#alias ls='/usr/bin/lsd --group-dirs=first'</span>
 
-<span class="c">#echo "Alias de lsd cargados"</span>
-<span class="c">#alias ls='lsd'</span>
-<span class="c">#alias l='ls -l'</span>
-<span class="c">#alias la='ls -a'</span>
-<span class="c">#alias lla='ls -la'</span>
-<span class="c">#alias lt='ls --tree'</span>
-
-
-<span class="c"># Set list of themes to pick from when loading at random</span>
-<span class="c"># Setting this variable when ZSH_THEME=random will cause zsh to load</span>
-<span class="c"># a theme from this variable instead of looking in $ZSH/themes/</span>
-<span class="c"># If set to an empty array, this variable will have no effect.</span>
-<span class="c"># ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )</span>
-
-<span class="c"># Uncomment the following line to use case-sensitive completion.</span>
-<span class="c"># CASE_SENSITIVE="true"</span>
-
-<span class="c"># Uncomment the following line to use hyphen-insensitive completion.</span>
-<span class="c"># Case-sensitive completion must be off. _ and - will be interchangeable.</span>
-<span class="c"># HYPHEN_INSENSITIVE="true"</span>
-
-<span class="c"># Uncomment one of the following lines to change the auto-update behavior</span>
-<span class="c"># zstyle ':omz:update' mode disabled  # disable automatic updates</span>
-<span class="c"># zstyle ':omz:update' mode auto      # update automatically without asking</span>
-<span class="c"># zstyle ':omz:update' mode reminder  # just remind me to update when it's time</span>
-
-<span class="c"># Uncomment the following line to change how often to auto-update (in days).</span>
-<span class="c"># zstyle ':omz:update' frequency 13</span>
-
-<span class="c"># Uncomment the following line if pasting URLs and other text is messed up.</span>
-<span class="c"># DISABLE_MAGIC_FUNCTIONS="true"</span>
-
-<span class="c"># Uncomment the following line to disable colors in ls.</span>
-<span class="c"># DISABLE_LS_COLORS="true"</span>
-
-<span class="c"># Uncomment the following line to disable auto-setting terminal title.</span>
-<span class="c"># DISABLE_AUTO_TITLE="true"</span>
-
-<span class="c"># Uncomment the following line to enable command auto-correction.</span>
-<span class="c"># ENABLE_CORRECTION="true"</span>
-
-<span class="c"># Uncomment the following line to display red dots whilst waiting for completion.</span>
-<span class="c"># You can also set it to another string to have that shown instead of the default red dots.</span>
-<span class="c"># e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"</span>
-<span class="c"># Caution: this setting can cause issues with multiline prompts in zsh &lt; 5.7.1 (see #5765)</span>
-<span class="c"># COMPLETION_WAITING_DOTS="true"</span>
-
-<span class="c"># Uncomment the following line if you want to disable marking untracked files</span>
-<span class="c"># under VCS as dirty. This makes repository status check for large repositories</span>
-<span class="c"># much, much faster.</span>
-<span class="c"># DISABLE_UNTRACKED_FILES_DIRTY="true"</span>
-
-<span class="c"># Uncomment the following line if you want to change the command execution time</span>
-<span class="c"># stamp shown in the history command output.</span>
-<span class="c"># You can set one of the optional three formats:</span>
-<span class="c"># "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"</span>
-<span class="c"># or set a custom format using the strftime function format specifications,</span>
-<span class="c"># see 'man strftime' for details.</span>
-<span class="c"># HIST_STAMPS="mm/dd/yyyy"</span>
-
-<span class="c"># Would you like to use another custom folder than $ZSH/custom?</span>
-<span class="c"># ZSH_CUSTOM=/path/to/new-custom-folder</span>
-
-<span class="c"># Which plugins would you like to load?</span>
-<span class="c"># Standad plugins can be found in $ZSH/plugins/</span>
-<span class="c"># Custom plugins may be added to $ZSH_CUSTOM/plugins/</span>
-<span class="c"># Example format: plugins=(rails git textmate ruby lighthouse)</span>
-<span class="c"># Add wisely, as too many plugins slow down shell startup.</span>
 <span class="nv">plugins</span><span class="o">=(</span>git
 	zsh-autosuggestions
 	zsh-syntax-highlighting 
@@ -498,36 +414,11 @@
 
 <span class="nb">source</span> <span class="nv">$ZSH</span>/oh-my-zsh.sh
 
-
-
 <span class="c"># User configuration</span>
 <span class="nv">ZSH_HIGHLIGHT_HIGHLIGHTERS</span><span class="o">=(</span>main brackets pattern cursor<span class="o">)</span>
 ZSH_HIGHLIGHT_STYLES[command]<span class="o">=</span><span class="s1">'fg=blue,bold'</span>
 ZSH_HIGHLIGHT_STYLES[builtin]<span class="o">=</span><span class="s1">'fg=green,bold'</span>
 
-
-
-
-<span class="c"># export MANPATH="/usr/local/man:$MANPATH"</span>
-
-<span class="c"># You may need to manually set your language environment</span>
-<span class="c"># export LANG=en_US.UTF-8</span>
-
-<span class="c"># Preferred editor for local and remote sessions</span>
-<span class="c"># if [[ -n $SSH_CONNECTION ]]; then</span>
-<span class="c">#   export EDITOR='vim'</span>
-<span class="c"># else</span>
-<span class="c">#   export EDITOR='mvim'</span>
-<span class="c"># fi</span>
-
-<span class="c"># Compilation flags</span>
-<span class="c"># export ARCHFLAGS="-arch x86_64"</span>
-
-<span class="c"># Set personal aliases, overriding those provided by oh-my-zsh libs,</span>
-<span class="c"># plugins, and themes. Aliases can be placed here, though oh-my-zsh</span>
-<span class="c"># users are encouraged to define aliases within the ZSH_CUSTOM folder.</span>
-<span class="c"># For a full list of active aliases, run `alias`.</span>
-<span class="c">#</span>
 <span class="c"># Example aliases</span>
 <span class="c"># alias zshconfig="mate ~/.zshrc"</span>
 <span class="c"># alias ohmyzsh="mate ~/.oh-my-zsh"</span>
@@ -613,7 +504,8 @@ ZSH_HIGHLIGHT_STYLES[builtin]<span class="o">=</span><span class="s1">'fg=green,
 ">Anterior</a>
     
     
-      <a href="#" class="pagination--pager disabled">Siguiente</a>
+      <a href="/hackthebox/permx/" class="pagination--pager" title="Maquina PermX
+">Siguiente</a>
     
   </nav>
 
@@ -629,6 +521,49 @@ ZSH_HIGHLIGHT_STYLES[builtin]<span class="o">=</span><span class="s1">'fg=green,
   
   <h2 class="page__related-title">Puede que también te interese</h2>
   <div class="grid__wrapper">
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/assets/images/MaquinaPermx/permx.webp"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/hackthebox/permx/" rel="permalink">Maquina PermX
+</a>
+        
+      
+    </h2>
+
+    <p class="page__meta">
+      
+        <i class="fa fa-fw fa-calendar" aria-hidden="true"></i> <time datetime="2024-07-12T00:00:00-06:00">July 12, 2024 </time>&emsp;
+      
+    </p>
+
+    <p class="archive__item-excerpt" itemprop="description"><img src="/assets/images/MaquinaPermx/permx.webp" alt="" style="float: right;margin-right:10px; margin-left:20px; margin-bottom:10px; height:120px;">En esta máquina se abordaron conceptos sencillos pero interesantes. Nos muestra los riesgos asociados al uso de la misma contraseña en múltiples servicios, y nos hace tomar conciencia de lo vulnerables que podemos estar.
+</p>
+    <i class="fas fa-tags"></i>
+    
+      <a href="/tags/#puerto 80" class="page__meta btn" rel="tag">puerto 80</a>
+    
+      <a href="/tags/#nmap" class="page__meta btn" rel="tag">nmap</a>
+    
+  </article>
+</div>
+
+
     
       
       
