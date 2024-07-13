@@ -75,6 +75,10 @@
 .archive__item-excerpt {
   margin-top: 0;
   font-size: $type-size-6;
+  text-align: justify;
+  hyphens: auto; /* Permite la separación de palabras con guiones */
+  /*letter-spacing: 0.8px; Ajusta el espaciado entre letras */
+  word-break: break-word;
 
   & + p {
     text-indent: 0;
@@ -83,6 +87,8 @@
   a {
     position: relative;
   }
+
+
 }
 
 .archive__item-teaser {
@@ -90,9 +96,6 @@
   border-radius: $border-radius;
   overflow: hidden;
 
-  img {
-    width: 100%;
-  }
 }
 
 .archive__item-caption {
@@ -220,6 +223,9 @@
       display: block;
       font-size: $type-size-6;
     }
+  img {
+     width: 0%;
+  }
   }
 
   .archive__item-teaser {
