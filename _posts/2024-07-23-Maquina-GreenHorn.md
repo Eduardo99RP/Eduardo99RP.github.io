@@ -1,7 +1,7 @@
 ---
 layout: single
 title:  Máquina GreenHorn de HackTheBox con dificultad fácil 
-excerpt: "En este post es mi personalización personal de un sistema operativo Linux de las herramientas más usadas y las más cómodas."
+excerpt: "La máquina GreenHorn nos muestra las posibilidades de encontrar contraseñas incluso cuando están ocultas en una imagen. Aunque esta máquina en sí misma no representa un gran desafío, el proceso para descubrir la contraseña resulta ser bastante interesante y educativo."
 date: 2024-07-23
 classes: wide
 header:
@@ -14,4 +14,4 @@ tags:
   - pluck 4.7.18
 ---
 
-## Proximamente...
+## Próximamente...

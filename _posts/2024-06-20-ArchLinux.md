@@ -1,7 +1,7 @@
 ---
 layout: single
-title: Instalacion, configuracion y personalizacion de ArchLinux.
-excerpt: "En este post es mi personalización personal de un sistema operativo Linux de las herramientas más usadas y las más cómodas."
+title: Instalación, configuración y personalización de ArchLinux.
+excerpt: "Nos sumergimos en la instalación de Arch Linux, un proceso que puede parecer un gran reto al principio, pero que en realidad es muy sencillo. Además, la personalización del sistema abre un mundo de posibilidades, permitiéndote adaptar cada detalle a tus necesidades y preferencias."
 date: 2024-07-19
 classes: wide
 header:
@@ -14,4 +14,4 @@ tags:
   - Personalización
 ---
 
-## Proximamente...
+## Próximamente...

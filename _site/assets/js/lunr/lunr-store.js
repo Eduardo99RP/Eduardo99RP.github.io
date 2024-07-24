@@ -17,14 +17,14 @@ var store = [{
         "url": "/hackthebox/permx/",
         "teaser": "/assets/images/MaquinaPermx/permx.webp"
       },{
-        "title": "Instalacion, configuracion y personalizacion de ArchLinux.",
-        "excerpt":"Proximamente…  ","categories": ["Linux"],
+        "title": "Instalación, configuración y personalización de ArchLinux.",
+        "excerpt":"Próximamente…  ","categories": ["Linux"],
         "tags": ["Linux","Personalización"],
         "url": "/linux/ArchLinux/",
         "teaser": "/assets/images/ArchLinux/icons8-arch-linux-480.png"
       },{
         "title": "Máquina GreenHorn de HackTheBox con dificultad fácil",
-        "excerpt":"Proximamente…  ","categories": ["HackTheBox"],
+        "excerpt":"Próximamente…  ","categories": ["HackTheBox"],
         "tags": ["pixelated","pluck 4.7.18"],
         "url": "/hackthebox/Maquina-GreenHorn/",
         "teaser": "/assets/images/MaquinaGreenHorn/GreenHorn.webp"
