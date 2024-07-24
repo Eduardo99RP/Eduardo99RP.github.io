@@ -8,10 +8,10 @@ header:
   teaser: assets/images/MaquinaGreenHorn/GreenHorn.webp
   teaser_home_page: true
 categories:
-  - Linux
+  - HackTheBox
 tags:
-  - Linux
-  - Personalización
+  - pixelated 
+  - pluck 4.7.18
 ---
 
 ## Proximamente...

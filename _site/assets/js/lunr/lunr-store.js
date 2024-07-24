@@ -24,8 +24,8 @@ var store = [{
         "teaser": "/assets/images/ArchLinux/icons8-arch-linux-480.png"
       },{
         "title": "Máquina GreenHorn de HackTheBox con dificultad fácil",
-        "excerpt":"Proximamente…  ","categories": ["Linux"],
-        "tags": ["Linux","Personalización"],
-        "url": "/linux/Maquina-GreenHorn/",
+        "excerpt":"Proximamente…  ","categories": ["HackTheBox"],
+        "tags": ["pixelated","pluck 4.7.18"],
+        "url": "/hackthebox/Maquina-GreenHorn/",
         "teaser": "/assets/images/MaquinaGreenHorn/GreenHorn.webp"
       }]
