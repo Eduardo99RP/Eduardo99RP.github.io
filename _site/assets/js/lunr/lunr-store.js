@@ -18,7 +18,7 @@ var store = [{
         "teaser": "/assets/images/MaquinaPermx/permx.webp"
       },{
         "title": "Instalación, configuración y personalización de ArchLinux.",
-        "excerpt":"Próximamente…  ","categories": ["Linux"],
+        "excerpt":"Arch Linux             Arch Linux es una distribución de Linux de propósito general x86-64 desarrollada de forma independiente. Se esfuerza por proporcionar las últimas versiones estables de la mayoría del software, siguiendo un modelo de rolling-release. La instalación por defecto es intencionadamente mínima para que los usuarios puedan añadir solo los paquetes que necesiten.     En este post se abordará la instalación de manera sencilla y la explicación de ciertos detalles que hay que tomar en cuenta a la hora de instalar el sistema. Una mala configuración y/o instalación puede terminar dañando las particiones si se está instalando junto con algún otro sistema operativo.    Descarga  Para descargar Arch Linux, es necesario hacerlo desde su página oficial. No hay un enlace directo para descargar la ISO; en su lugar, se deben utilizar los enlaces Torrent o Magnet.   Descarga de ArchLinux   Podemos ver los enlaces mencionados anteriormente en el apartado BitTorrent Download (recommended):        En este caso se descargo la version de Torrent, para poder descargar este archivo se puede usar uTorrent para Windows o qBittorrent para Linux        Continuara…  ","categories": ["Linux"],
         "tags": ["Linux","Personalización"],
         "url": "/linux/ArchLinux/",
         "teaser": "/assets/images/ArchLinux/icons8-arch-linux-480.png"

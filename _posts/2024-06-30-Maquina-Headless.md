@@ -82,9 +82,9 @@ nmap -p22,5000 -A -Pn -vvv 10.10.11.8
 - **-p22,5000**: Esta opción especifica los puertos que deseas escanear. En este caso, Nmap escaneará los puertos 22 (usualmente usado por SSH) y 5000. Puedes especificar un rango de puertos o una lista separada por comas.
 - **-A**: Esta opción activa la detección avanzada. Incluirá:
   1. Detección de sistema operativo.
-  1. Detección de versión de servicio.
-  1. Escaneo de scripts.
-  1. Rastreo de ruta (traceroute).
+  2. Detección de versión de servicio.
+  3. Escaneo de scripts.
+  4. Rastreo de ruta (traceroute).
 - **-Pn**: Esta opción le dice a Nmap que no haga un "ping" previo a los hosts para ver si están activos. Por defecto, Nmap hace un ping para determinar si un host está activo antes de escanearlo. Con -Pn, Nmap escaneará los puertos incluso si el host no responde a los pings.
 
 <p align="center">
@@ -105,6 +105,7 @@ En este caso procedemos a buscar páginas que puedan estar ocultas apartir de la
 <p align="center">
 <img src="/assets/images/MaquinaHeadless/Aspose.Words.c51fa9d9-6a10-477b-b35c-8f7240e81596.003.png">
 </p>
+
 
 
 
