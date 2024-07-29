@@ -41,5 +41,20 @@ En este caso se descargo la version de Torrent, para poder descargar este archiv
 <p align="center">
 <img src="/assets/images/ArchLinux/utorret.png">
 </p>
+<p style="text-align: justify;"> 
+Una vez descargada la ISO, procederemos a utilizar <a href="https://rufus.ie/es/">Rufus</a>, <a href="https://www.ventoy.net/en/download.html">Ventoy</a> u otro programa similar para grabar la imagen en una memoria USB. Alternativamente, también puedes utilizar la ISO para instalar el sistema en una máquina virtual.
+
+Una vez que hayamos iniciado el sistema, ya sea en la máquina virtual o de manera nativa, nos aparecerá una ventana como la siguiente:
+
+<p style="text-align: center;">
+<img src="/assets/images/ArchLinux/EFFI.png" alt="Ventana de inicio de Arch Linux">
+</p>
+
+Seleccionaremos la primera opción y presionaremos Enter para iniciar Arch Linux:
+
+<p style="text-align: center;">
+<img src="/assets/images/ArchLinux/bienvenida.png" alt="Pantalla de bienvenida de Arch Linux">
+</p>
+</p>
 
 ## Continuara...
