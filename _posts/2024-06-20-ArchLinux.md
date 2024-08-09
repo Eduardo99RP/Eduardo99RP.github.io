@@ -310,6 +310,6 @@ git clone https://github.com/NvChad/starter ~/.config/nvim && nvim
 ```
 Para mas detalles de instalación de herramientas para Linux podemos ver el siguiente enlace: 
 
-[Personalización de un entorno de trabajo Linux](https://eduardo99rp.github.io/linux/ArchLinux/)
+[Personalización de un entorno de trabajo Linux](https://eduardo99rp.github.io/linux/Personalizacion/)
 
 
