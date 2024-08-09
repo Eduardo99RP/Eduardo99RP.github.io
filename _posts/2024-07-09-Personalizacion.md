@@ -15,7 +15,7 @@ tags:
 ---
 
 
-# Personalización de Linux
+# Personalización de la terminal
 Instalación de  [ZSH](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH) para eso vamos a usar el siguiente comando:
 
 - Debian o Ubuntu 
@@ -81,7 +81,7 @@ Guía de instalación.
     p10k configure
     ```
 
-## Instalación de plugins
+# Instalación de plugins
 Hay dos plugin muy usados cuáles son: 
 - zsh-autosuggestions
 ```sh
@@ -105,7 +105,7 @@ Finalmente tendremos la siguiente terminal y nos quedaría de la siguiente maner
 <img src="/assets/images/PersonalizacionLinux/ventana.png">
 </p>
 
-## Configuración de alias  
+# Configuración de alias  
 
 ### Alias de bat
 En este caso se utiliza la herramienta [bat](https://github.com/sharkdp/bat) la cual tiene una función parecida al comando cat, sin embargo, este tiene una presentación más elegante y más visual, por lo cual se opta por modificar el comando cat usando el alias en ```.zshrc```
@@ -197,7 +197,7 @@ Así es como se ve nuestra terminal usando esta herramienta:
 
 
 
-## Configuración de .zshrc
+# Configuración de .zshrc
 Esta es la configuración final `.zshrc`  
 
 ```sh
@@ -239,7 +239,7 @@ alias  catln='/bin/bat --paging=never'
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 ```
-## Aplicación para el usuario root
+# Aplicación para el usuario root
 Si deseas que estos alias también estén disponibles para el usuario root, puedes seguir los mismos pasos anteriores. Alternativamente, puedes crear un enlace simbólico del archivo .zshrc de tu usuario hacia el directorio del root:
 
 ```sh
