@@ -1,0 +1,714 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.26.2 by Michael Rose
+  Copyright 2013-2024 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="es-ES" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Clásico juego de snake en python - BlogPersonal</title>
+<meta name="description" content="Revive la nostalgia con Snake, el clásico juego de la serpiente, ahora hecho en Python! 🐍📜 Disfruta de un código simple y adictivo que crece a medida que recoges alimentos. Ideal para aprender y jugar. 🚀🎮">
+
+
+  <meta name="author" content="Eduardo Rivera">
+  
+  <meta property="article:author" content="Eduardo Rivera">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="BlogPersonal">
+<meta property="og:title" content="Clásico juego de snake en python">
+<meta property="og:url" content="http://localhost:4000/python/Snake-Python/">
+
+
+  <meta property="og:description" content="Revive la nostalgia con Snake, el clásico juego de la serpiente, ahora hecho en Python! 🐍📜 Disfruta de un código simple y adictivo que crece a medida que recoges alimentos. Ideal para aprender y jugar. 🚀🎮">
+
+
+
+  <meta property="og:image" content="http://localhost:4000/assets/images/Snake/snake.png">
+
+
+
+
+
+  <meta property="article:published_time" content="2024-08-12T00:00:00-06:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/python/Snake-Python/">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="BlogPersonal Feed">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script type="text/javascript">
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single wide" dir="ltr">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Saltar a navegación principal</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Saltar a contenido</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Saltar a pie</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          BlogPersonal
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a
+                href="https://eduardo99rp.github.io/"
+                
+                
+              >Home</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Alternar búsqueda</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Alternar menú</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="http://localhost:4000/">
+        <img src="/assets/images/bio-photo.jpg" alt="Eduardo Rivera" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="http://localhost:4000/" itemprop="url">Eduardo Rivera</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>Ingeniero en computacion</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Seguir</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+        
+          
+            <li><a href="https://eduardo99rp.github.io/" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fas fa-fw fa-link" aria-hidden="true"></i><span class="label">Mi blog</span></a></li>
+          
+        
+          
+            <li><a href="https://github.com/Eduardo99RP" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+            <li><a href="https://www.linkedin.com/in/juan-eduardo-rivera-p%C3%A9rez-a76909226/" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">Linkedin</span></a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Clásico juego de snake en python">
+    <meta itemprop="description" content="Revive la nostalgia con Snake, el clásico juego de la serpiente, ahora hecho en Python! 🐍📜 Disfruta de un código simple y adictivo que crece a medida que recoges alimentos. Ideal para aprender y jugar. 🚀🎮">
+    <meta itemprop="datePublished" content="2024-08-12T00:00:00-06:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">
+            <a href="http://localhost:4000/python/Snake-Python/" itemprop="url">Clásico juego de snake en python
+</a>
+          </h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          3 minuto(s) de lectura
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <h1 id="historia">Historia</h1>
+<p>El juego de la serpiente es uno de los videojuegos más icónicos y conocidos, originalmente popularizado en teléfonos móviles Nokia a finales de los años 90. El objetivo es simple: controlar una serpiente que se mueve por la pantalla, consumiendo comida para crecer, mientras se evita chocar contra las paredes o contra sí misma. Este juego, a pesar de su simplicidad, sigue siendo muy popular y ha sido recreado en innumerables plataformas y lenguajes de programación.</p>
+
+<h1 id="funcionalidad">Funcionalidad</h1>
+<p>Este proyecto recrea el clásico juego de la serpiente usando Python y la biblioteca gráfica Tkinter. La serpiente se mueve dentro de un área de juego definida (un Canvas) y puede cambiar de dirección en respuesta a las teclas de flecha del teclado. Un cuadrado rojo representa la “comida” y aparece en posiciones aleatorias dentro del área de juego. Cuando la serpiente come la comida, su longitud aumenta y la puntuación del jugador se incrementa. El juego termina si la serpiente choca contra sí misma.</p>
+
+<h1 id="explicación-del-código">Explicación del Código</h1>
+<p>Inicialización de la Ventana y Componentes</p>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">SnakeApp</span><span class="p">():</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">root</span><span class="p">):</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">root</span> <span class="o">=</span> <span class="n">root</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">root</span><span class="p">.</span><span class="nf">title</span><span class="p">(</span><span class="sh">"</span><span class="s">Snake</span><span class="sh">"</span><span class="p">)</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">root</span><span class="p">.</span><span class="nf">geometry</span><span class="p">(</span><span class="sh">"</span><span class="s">450x480</span><span class="sh">"</span><span class="p">)</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">root</span><span class="p">.</span><span class="nf">configure</span><span class="p">(</span><span class="n">bg</span><span class="o">=</span><span class="sh">'</span><span class="s">#654321</span><span class="sh">'</span><span class="p">)</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">root</span><span class="p">.</span><span class="nf">resizable</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+</code></pre></div></div>
+<p>Aquí se inicializa la ventana principal del juego. Se establece el tamaño de la ventana, el color de fondo, y se impide que la ventana sea redimensionada.</p>
+
+<h3 id="lienzo-y-etiquetas">Lienzo y Etiquetas</h3>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">self</span><span class="p">.</span><span class="n">canvas</span> <span class="o">=</span> <span class="nc">Canvas</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span> <span class="n">bg</span><span class="o">=</span><span class="sh">'</span><span class="s">black</span><span class="sh">'</span><span class="p">,</span> <span class="n">highlightthickness</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">self</span><span class="p">.</span><span class="n">canvas</span><span class="p">.</span><span class="nf">place</span><span class="p">(</span><span class="n">relx</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">rely</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">anchor</span><span class="o">=</span><span class="n">CENTER</span><span class="p">)</span>
+
+<span class="n">self</span><span class="p">.</span><span class="n">score_label</span> <span class="o">=</span> <span class="nc">Label</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="sh">"</span><span class="s">Puntuación: 0</span><span class="sh">"</span><span class="p">,</span> <span class="n">font</span><span class="o">=</span><span class="p">(</span><span class="sh">"</span><span class="s">Arial</span><span class="sh">"</span><span class="p">,</span> <span class="mi">14</span><span class="p">),</span> <span class="n">bg</span><span class="o">=</span><span class="sh">'</span><span class="s">#654321</span><span class="sh">'</span><span class="p">,</span> <span class="n">fg</span><span class="o">=</span><span class="sh">'</span><span class="s">white</span><span class="sh">'</span><span class="p">)</span>
+<span class="n">self</span><span class="p">.</span><span class="n">score_label</span><span class="p">.</span><span class="nf">place</span><span class="p">(</span><span class="n">relx</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">rely</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span> <span class="n">anchor</span><span class="o">=</span><span class="n">CENTER</span><span class="p">)</span>
+</code></pre></div></div>
+<p>Se crea un Canvas donde se dibujará la serpiente y la comida. Además, se añade una etiqueta para mostrar la puntuación actual del jugador.</p>
+
+<h3 id="configuración-inicial-de-la-serpiente">Configuración Inicial de la Serpiente</h3>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">self</span><span class="p">.</span><span class="n">snake</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">self</span><span class="p">.</span><span class="n">snake_x</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">self</span><span class="p">.</span><span class="n">snake_y</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">self</span><span class="p">.</span><span class="n">direction</span> <span class="o">=</span> <span class="p">{</span><span class="sh">'</span><span class="s">x</span><span class="sh">'</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="sh">'</span><span class="s">y</span><span class="sh">'</span><span class="p">:</span> <span class="mi">0</span><span class="p">}</span>
+<span class="n">self</span><span class="p">.</span><span class="n">initial_length</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">self</span><span class="p">.</span><span class="nf">create_snake</span><span class="p">()</span>
+</code></pre></div></div>
+<p>Se define la posición inicial de la serpiente y su dirección de movimiento. La serpiente comienza con una longitud de 3 segmentos.</p>
+
+<h3 id="movimiento-de-la-serpiente">Movimiento de la Serpiente</h3>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">move</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">self</span><span class="p">.</span><span class="n">game_over</span><span class="p">:</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">snake_x</span> <span class="o">+=</span> <span class="n">self</span><span class="p">.</span><span class="n">direction</span><span class="p">[</span><span class="sh">'</span><span class="s">x</span><span class="sh">'</span><span class="p">]</span> <span class="o">*</span> <span class="n">self</span><span class="p">.</span><span class="n">square_size</span> 
+        <span class="n">self</span><span class="p">.</span><span class="n">snake_y</span> <span class="o">+=</span> <span class="n">self</span><span class="p">.</span><span class="n">direction</span><span class="p">[</span><span class="sh">'</span><span class="s">y</span><span class="sh">'</span><span class="p">]</span> <span class="o">*</span> <span class="n">self</span><span class="p">.</span><span class="n">square_size</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">snake_x</span> <span class="o">%=</span> <span class="mi">400</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">snake_y</span> <span class="o">%=</span> <span class="mi">400</span>
+        <span class="k">if</span> <span class="n">self</span><span class="p">.</span><span class="nf">check_collision</span><span class="p">():</span>
+            <span class="n">self</span><span class="p">.</span><span class="nf">end_game</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="nf">len</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">snake</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+            <span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">y2</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="n">canvas</span><span class="p">.</span><span class="nf">coords</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">snake</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+            <span class="n">self</span><span class="p">.</span><span class="n">canvas</span><span class="p">.</span><span class="nf">coords</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">snake</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">y2</span><span class="p">)</span>
+        <span class="n">x1</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="n">snake_x</span>
+        <span class="n">y1</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="n">snake_y</span>
+        <span class="n">x2</span> <span class="o">=</span> <span class="n">x1</span> <span class="o">+</span> <span class="n">self</span><span class="p">.</span><span class="n">square_size</span>
+        <span class="n">y2</span> <span class="o">=</span> <span class="n">y1</span> <span class="o">+</span> <span class="n">self</span><span class="p">.</span><span class="n">square_size</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">canvas</span><span class="p">.</span><span class="nf">coords</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">snake</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">y2</span><span class="p">)</span>
+        <span class="n">head_coords</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="n">canvas</span><span class="p">.</span><span class="nf">coords</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">snake</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">x1_r</span><span class="p">,</span> <span class="n">y1_r</span><span class="p">,</span> <span class="n">x2_r</span><span class="p">,</span> <span class="n">y2_r</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="n">canvas</span><span class="p">.</span><span class="nf">coords</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">rect_2</span><span class="p">)</span>
+        <span class="nf">if </span><span class="p">(</span><span class="n">head_coords</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">x2_r</span> <span class="ow">and</span> <span class="n">head_coords</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">x1_r</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">head_coords</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">y2_r</span> <span class="ow">and</span> <span class="n">head_coords</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">y1_r</span><span class="p">):</span>
+            <span class="n">self</span><span class="p">.</span><span class="nf">randomize_red_square_position</span><span class="p">()</span>
+            <span class="n">self</span><span class="p">.</span><span class="nf">extend_snake</span><span class="p">()</span>
+            <span class="n">self</span><span class="p">.</span><span class="n">score</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="n">self</span><span class="p">.</span><span class="n">score_label</span><span class="p">.</span><span class="nf">config</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="sa">f</span><span class="sh">"</span><span class="s">Puntuación: </span><span class="si">{</span><span class="n">self</span><span class="p">.</span><span class="n">score</span><span class="si">}</span><span class="sh">"</span><span class="p">)</span>
+    <span class="n">self</span><span class="p">.</span><span class="n">root</span><span class="p">.</span><span class="nf">after</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="n">self</span><span class="p">.</span><span class="n">move</span><span class="p">)</span>
+</code></pre></div></div>
+<p>Este método se ejecuta repetidamente para mover la serpiente en la dirección actual. También verifica si la serpiente ha chocado contra sí misma o si ha comido la comida roja. En caso de que coma, se actualiza la puntuación y se incrementa la longitud de la serpiente.</p>
+
+<h3 id="finalización-del-juego">Finalización del Juego</h3>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">end_game</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">self</span><span class="p">.</span><span class="n">game_over</span><span class="p">:</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">game_over</span> <span class="o">=</span> <span class="bp">True</span>
+        <span class="n">messagebox</span><span class="p">.</span><span class="nf">showinfo</span><span class="p">(</span><span class="sh">"</span><span class="s">Game Over</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">¡Has perdido!</span><span class="se">\n</span><span class="s">Presiona aceptar</span><span class="sh">"</span><span class="p">)</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">game_over</span> <span class="o">=</span> <span class="bp">False</span>
+        <span class="n">self</span><span class="p">.</span><span class="nf">reset_game</span><span class="p">()</span>
+</code></pre></div></div>
+<p>Este método muestra un mensaje de “Game Over” y reinicia el juego si la serpiente choca contra sí misma.</p>
+
+<h3 id="posibles-mejoras">Posibles Mejoras</h3>
+<ul>
+  <li>
+    <p><strong>Incremento de Velocidad</strong>: A medida que la puntuación aumenta, se podría incrementar la velocidad de la serpiente para hacer el juego más desafiante.</p>
+  </li>
+  <li>
+    <p><strong>Obstáculos</strong>: Agregar obstáculos aleatorios en el área de juego para aumentar la dificultad.</p>
+  </li>
+  <li>
+    <p><strong>Sonidos</strong>: Incluir efectos de sonido para las acciones como comer la comida o chocar contra sí misma.
+Mejorar la Aleatorización del Cuadrado Rojo: Actualmente, el cuadrado rojo aparece en posiciones simétricas. Sería mejor permitir que aparezca en cualquier parte del lienzo.</p>
+  </li>
+</ul>
+
+<h3 id="recomendación">Recomendación</h3>
+<p>Este proyecto es un excelente punto de partida para aprender sobre la programación de interfaces gráficas y la lógica de juegos en Python. Se recomienda experimentar con diferentes mejoras para aprender cómo afectan la jugabilidad y la interacción del usuario.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Etiquetas: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#juegos" class="page__taxonomy-item p-category" rel="tag">juegos</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categorías: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#python" class="page__taxonomy-item p-category" rel="tag">python</a>
+    
+    </span>
+  </p>
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Actualizado:</strong> <time class="dt-published" datetime="2024-08-12T00:00:00-06:00">August 12, 2024</time></p>
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Compartir en</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Cl%C3%A1sico+juego+de+snake+en+python%20http%3A%2F%2Flocalhost%3A4000%2Fpython%2FSnake-Python%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Compartir en Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fpython%2FSnake-Python%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Compartir en Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/python/Snake-Python/" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Compartir en LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/hackthebox/Maquina-GreenHorn/" class="pagination--pager" title="Máquina GreenHorn de HackTheBox con dificultad fácil
+">Anterior</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Siguiente</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    
+<div class="page__related">
+  
+  <h2 class="page__related-title">Puede que también te interese</h2>
+  <div class="grid__wrapper">
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/assets/images/MaquinaGreenHorn/GreenHorn.webp"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/hackthebox/Maquina-GreenHorn/" rel="permalink">Máquina GreenHorn de HackTheBox con dificultad fácil
+</a>
+        
+      
+    </h2>
+
+    <p class="page__meta">
+      
+        <i class="fa fa-fw fa-calendar" aria-hidden="true"></i> <time datetime="2024-07-23T00:00:00-06:00">July 23, 2024 </time>&emsp;
+      
+    </p>
+
+    <p class="archive__item-excerpt" itemprop="description"><img src="assets/images/MaquinaGreenHorn/GreenHorn.webp" alt="" style="float: right;margin-right:10px; margin-left:20px; margin-bottom:10px; height:120px;">La máquina GreenHorn nos muestra las posibilidades de encontrar contraseñas incluso cuando están ocultas en una imagen. Aunque esta máquina en sí misma no representa un gran desafío, el proceso para descubrir la contraseña resulta ser bastante interesante y educativo.
+</p>
+    <i class="fas fa-tags"></i>
+    
+      <a href="/tags/#pixelated" class="page__meta btn" rel="tag">pixelated</a>
+    
+      <a href="/tags/#pluck 4.7.18" class="page__meta btn" rel="tag">pluck 4.7.18</a>
+    
+  </article>
+</div>
+
+
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/assets/images/ArchLinux/icons8-arch-linux-480.png"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/linux/ArchLinux/" rel="permalink">Instalación, configuración y personalización de ArchLinux.
+</a>
+        
+      
+    </h2>
+
+    <p class="page__meta">
+      
+        <i class="fa fa-fw fa-calendar" aria-hidden="true"></i> <time datetime="2024-07-19T00:00:00-06:00">July 19, 2024 </time>&emsp;
+      
+    </p>
+
+    <p class="archive__item-excerpt" itemprop="description"><img src="assets/images/ArchLinux/icons8-arch-linux-480.png" alt="" style="float: right;margin-right:10px; margin-left:20px; margin-bottom:10px; height:120px;">Nos sumergimos en la instalación de Arch Linux, un proceso que puede parecer un gran reto al principio, pero que en realidad es muy sencillo. Además, la personalización del sistema abre un mundo de posibilidades, permitiéndote adaptar cada detalle a tus necesidades y preferencias.
+</p>
+    <i class="fas fa-tags"></i>
+    
+      <a href="/tags/#Linux" class="page__meta btn" rel="tag">Linux</a>
+    
+      <a href="/tags/#Personalización" class="page__meta btn" rel="tag">Personalización</a>
+    
+  </article>
+</div>
+
+
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/assets/images/MaquinaPermx/permx.webp"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/hackthebox/permx/" rel="permalink">Máquina PermX de HackTheBox con dificultad fácil
+</a>
+        
+      
+    </h2>
+
+    <p class="page__meta">
+      
+        <i class="fa fa-fw fa-calendar" aria-hidden="true"></i> <time datetime="2024-07-12T00:00:00-06:00">July 12, 2024 </time>&emsp;
+      
+    </p>
+
+    <p class="archive__item-excerpt" itemprop="description"><img src="/assets/images/MaquinaPermx/permx.webp" alt="" style="float: right;margin-right:10px; margin-left:20px; margin-bottom:10px; height:120px;">En esta máquina se abordaron conceptos sencillos pero interesantes. Nos muestra los riesgos asociados al uso de la misma contraseña en múltiples servicios, y nos hace tomar conciencia de lo vulnerables que podemos estar.
+</p>
+    <i class="fas fa-tags"></i>
+    
+      <a href="/tags/#puerto 80" class="page__meta btn" rel="tag">puerto 80</a>
+    
+      <a href="/tags/#nmap" class="page__meta btn" rel="tag">nmap</a>
+    
+  </article>
+</div>
+
+
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/assets/images/PersonalizacionLinux/painter-penguin.svg"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/linux/Personalizacion/" rel="permalink">Personalización de un entorno de trabajo Linux.
+</a>
+        
+      
+    </h2>
+
+    <p class="page__meta">
+      
+        <i class="fa fa-fw fa-calendar" aria-hidden="true"></i> <time datetime="2024-07-09T00:00:00-06:00">July 09, 2024 </time>&emsp;
+      
+    </p>
+
+    <p class="archive__item-excerpt" itemprop="description"><img src="assets/images/PersonalizacionLinux/painter-penguin.svg" alt="" style="float: right;margin-right:10px; margin-left:20px; margin-bottom:10px; height:120px;">En este post es mi personalización personal de un sistema operativo Linux de las herramientas más usadas y las más cómodas.
+</p>
+    <i class="fas fa-tags"></i>
+    
+      <a href="/tags/#Linux" class="page__meta btn" rel="tag">Linux</a>
+    
+      <a href="/tags/#Personalización" class="page__meta btn" rel="tag">Personalización</a>
+    
+  </article>
+</div>
+
+
+    
+  </div>
+</div>
+
+  
+  
+</div>
+
+      
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Términos de búsqueda...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Términos de búsqueda..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2024 <a href="http://localhost:4000">BlogPersonal</a>. </div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+  </body>
+</html>

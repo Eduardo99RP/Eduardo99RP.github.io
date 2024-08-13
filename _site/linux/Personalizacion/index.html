@@ -279,7 +279,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          1 minuto(s) de lectura
+          3 minuto(s) de lectura
         
       </span>
     
@@ -291,12 +291,20 @@
 
       <section class="page__content" itemprop="text">
         
-        <h1 id="personalización-de-linux">Personalización de Linux</h1>
+        <h1 id="personalización-de-la-terminal">Personalización de la terminal</h1>
 <p>Instalación de  <a href="https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH">ZSH</a> para eso vamos a usar el siguiente comando:</p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apt <span class="nb">install </span>zsh
-</code></pre></div></div>
-<p>Opcionalmente, se puede instalar <a href="https://ohmyz.sh/">oh-my-zsh</a></p>
+<ul>
+  <li>Debian o Ubuntu
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt <span class="nb">install </span>zsh
+</code></pre></div>    </div>
+  </li>
+  <li>ArchLinux
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt <span class="nt">-S</span> zsh
+</code></pre></div>    </div>
+    <p>Opcionalmente, se puede instalar <a href="https://ohmyz.sh/">oh-my-zsh</a></p>
+  </li>
+</ul>
 
 <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sh <span class="nt">-c</span> <span class="s2">"</span><span class="si">$(</span>curl <span class="nt">-fsSL</span> https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh<span class="si">)</span><span class="s2">"</span>
 </code></pre></div></div>
@@ -308,10 +316,33 @@
 <ul>
   <li>Fuentes que se deben instalar:
     <ul>
-      <li><a href="https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf">MesloLGS NF Regular.ttf</a></li>
-      <li><a href="https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf">MesloLGS NF Bold.ttf</a></li>
-      <li><a href="https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf">MesloLGS NF Italic.ttf</a></li>
-      <li><a href="https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf">MesloLGS NF Bold Italic.ttf</a></li>
+      <li><strong>MesloLGS</strong> fuentes que recomienda el autor:
+        <ul>
+          <li><a href="https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf">MesloLGS NF Regular.ttf</a></li>
+          <li><a href="https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf">MesloLGS NF Bold.ttf</a></li>
+          <li><a href="https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf">MesloLGS NF Italic.ttf</a></li>
+          <li><a href="https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf">MesloLGS NF Bold Italic.ttf</a></li>
+        </ul>
+      </li>
+      <li><strong>Hack Nerd Fonts</strong>
+        <ul>
+          <li><a href="https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Hack.zip">Hack Nerd Fonts</a>
+            <ul>
+              <li>Instalación manual funciona en cualquier distribución
+                <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nb">sudo mv </span>Hack.zip /usr/share/fonts
+  <span class="nb">cd</span> /usr/share/fonts
+  <span class="nb">sudo </span>unzip Hack.zip
+  <span class="nb">sudo rm </span>Hack.zip
+</code></pre></div>                </div>
+              </li>
+              <li>Instalación automática en ArchLinux
+                <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yay <span class="nt">-S</span> ttf-hack-nerd
+</code></pre></div>                </div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
     </ul>
   </li>
   <li>Instalación
@@ -338,7 +369,7 @@
   </li>
 </ul>
 
-<h2 id="instalación-de-plugins">Instalación de plugins</h2>
+<h1 id="instalación-de-plugins">Instalación de plugins</h1>
 <p>Hay dos plugin muy usados cuáles son:</p>
 <ul>
   <li>zsh-autosuggestions
@@ -358,16 +389,44 @@
     zsh-syntax-highlighting 
 <span class="o">)</span>
 </code></pre></div></div>
+<p>Finalmente tendremos la siguiente terminal y nos quedaría de la siguiente manera:</p>
+<p align="center">
+<img src="/assets/images/PersonalizacionLinux/ventana.png" />
+</p>
 
-<h2 id="alias-de-bat">Alias de bat</h2>
+<h1 id="configuración-de-alias">Configuración de alias</h1>
+
+<h3 id="alias-de-bat">Alias de bat</h3>
 <p>En este caso se utiliza la herramienta <a href="https://github.com/sharkdp/bat">bat</a> la cual tiene una función parecida al comando cat, sin embargo, este tiene una presentación más elegante y más visual, por lo cual se opta por modificar el comando cat usando el alias en <code class="language-plaintext highlighter-rouge">.zshrc</code></p>
 
-<p>Para la instalación de esta herramienta se puede instalar con el siguiente comando.</p>
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt <span class="nb">install </span>bat
-</code></pre></div></div>
-<p>o bien se puede descargar la <a href="https://github.com/sharkdp/bat/releases/tag/v0.24.0">última versión</a> para ello se instala de la siguiente manera.</p>
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt <span class="nb">install</span> ./nombre_del_archivo.deb
-</code></pre></div></div>
+<h2 id="instalación-de-la-herramienta">Instalación de la herramienta</h2>
+
+<p>Para la instalación de esta herramienta, se puede usar uno de los siguientes métodos:</p>
+
+<h3 id="en-ubuntudebian">En Ubuntu/Debian:</h3>
+<ol>
+  <li>Instalación mediante el gestor de paquetes:
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nb">sudo </span>apt <span class="nb">install </span>bat
+</code></pre></div>    </div>
+  </li>
+  <li>Instalación manual descargando la <a href="https://github.com/sharkdp/bat/releases/tag/v0.24.0">última versión</a>:
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nb">sudo </span>apt <span class="nb">install</span> ./nombre_del_archivo.deb
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<h3 id="en-arch-linux">En Arch Linux:</h3>
+<ol>
+  <li>Instalación mediante el gestor de paquetes <code class="language-plaintext highlighter-rouge">pacman</code>:
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nb">sudo </span>pacman <span class="nt">-S</span> bat
+</code></pre></div>    </div>
+  </li>
+  <li>Instalación manual desde el AUR utilizando un ayudante como <code class="language-plaintext highlighter-rouge">yay</code>:
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code> yay <span class="nt">-S</span> bat
+</code></pre></div>    </div>
+  </li>
+</ol>
+
 <p>Dentro del archivo <code class="language-plaintext highlighter-rouge">.zshrc</code> se agrega el siguiente alias:</p>
 <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">alias cat</span><span class="o">=</span><span class="s1">'/bin/bat'</span>
 <span class="nb">alias </span><span class="nv">catn</span><span class="o">=</span><span class="s1">'/bin/cat'</span>
@@ -382,34 +441,69 @@
 <img src="/assets/images/PersonalizacionLinux/batcat2.png" />
 </p>
 
-<h2 id="alias-de-lsb">Alias de lsb</h2>
+<h3 id="alias-de-lsd">Alias de lsd</h3>
 
+<p><code class="language-plaintext highlighter-rouge">lsd</code> es una versión mejorada del comando <code class="language-plaintext highlighter-rouge">ls</code>, que incluye colores y otros elementos visuales para mejorar la experiencia de usuario. A continuación, se presentan alias que puedes agregar a tu archivo <code class="language-plaintext highlighter-rouge">.zshrc</code> para sustituir el uso de <code class="language-plaintext highlighter-rouge">ls</code> por <code class="language-plaintext highlighter-rouge">lsd</code>:</p>
+
+<h2 id="instalación-de-la-herramienta-1">Instalación de la herramienta</h2>
+
+<h3 id="en-ubuntudebian-1">En Ubuntu/Debian:</h3>
+<ol>
+  <li>Instalación mediante el gestor de paquetes:
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nb">sudo </span>apt <span class="nb">install </span>lsd
+</code></pre></div>    </div>
+  </li>
+  <li>Instalación manual descargando la <a href="https://github.com/Peltoche/lsd/releases">última versión</a>:
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nb">sudo </span>dpkg <span class="nt">-i</span> ./nombre_del_archivo.deb
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<h3 id="en-arch-linux-1">En Arch Linux:</h3>
+<ol>
+  <li>Instalación mediante el gestor de paquetes <code class="language-plaintext highlighter-rouge">pacman</code>:
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nb">sudo </span>pacman <span class="nt">-S</span> lsd
+</code></pre></div>    </div>
+  </li>
+  <li>Instalación manual desde el AUR utilizando un ayudante como <code class="language-plaintext highlighter-rouge">yay</code>:
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code> yay <span class="nt">-S</span> lsd
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<p>Dentro del archivo <code class="language-plaintext highlighter-rouge">.zshrc</code> se agregan los siguientes alias:</p>
 <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">alias ls</span><span class="o">=</span><span class="s1">'lsd'</span>
 <span class="nb">alias </span><span class="nv">l</span><span class="o">=</span><span class="s1">'ls -l'</span>
 <span class="nb">alias </span><span class="nv">la</span><span class="o">=</span><span class="s1">'ls -a'</span>
 <span class="nb">alias </span><span class="nv">lla</span><span class="o">=</span><span class="s1">'ls -la'</span>
 <span class="nb">alias </span><span class="nv">lt</span><span class="o">=</span><span class="s1">'ls --tree'</span>
-</code></pre></div></div>
 
-<h2 id="configuración-personal-de-zshrc">Configuración personal de .zshrc</h2>
+</code></pre></div></div>
+<p>Así es como se ve nuestra terminal usando esta herramienta:</p>
+
+<p align="center">
+<img src="/assets/images/PersonalizacionLinux/carpetas.png" />
+</p>
+
+<p align="center">
+<img src="/assets/images/PersonalizacionLinux/l.png" />
+</p>
+
+<h1 id="configuración-de-zshrc">Configuración de .zshrc</h1>
+<p>Esta es la configuración final <code class="language-plaintext highlighter-rouge">.zshrc</code></p>
 
 <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 <span class="k">if</span> <span class="o">[[</span> <span class="nt">-r</span> <span class="s2">"</span><span class="k">${</span><span class="nv">XDG_CACHE_HOME</span><span class="k">:-</span><span class="nv">$HOME</span><span class="p">/.cache</span><span class="k">}</span><span class="s2">/p10k-instant-prompt-</span><span class="k">${</span><span class="p">(%)</span><span class="k">:-</span><span class="p">%n</span><span class="k">}</span><span class="s2">.zsh"</span> <span class="o">]]</span><span class="p">;</span> <span class="k">then
   </span><span class="nb">source</span> <span class="s2">"</span><span class="k">${</span><span class="nv">XDG_CACHE_HOME</span><span class="k">:-</span><span class="nv">$HOME</span><span class="p">/.cache</span><span class="k">}</span><span class="s2">/p10k-instant-prompt-</span><span class="k">${</span><span class="p">(%)</span><span class="k">:-</span><span class="p">%n</span><span class="k">}</span><span class="s2">.zsh"</span>
-<span class="k">fi
+<span class="k">fi</span>
 
-</span><span class="nb">export </span><span class="nv">ZSH</span><span class="o">=</span><span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/.oh-my-zsh"</span>
+<span class="c"># Path to your Oh My Zsh installation.</span>
+<span class="nb">export </span><span class="nv">ZSH</span><span class="o">=</span><span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/.oh-my-zsh"</span>
 
 <span class="nv">ZSH_THEME</span><span class="o">=</span><span class="s2">"powerlevel10k/powerlevel10k"</span>
-
-<span class="c">#alias </span>
-<span class="nb">alias cat</span><span class="o">=</span><span class="s1">'/bin/bat'</span>
-<span class="nb">alias </span><span class="nv">catn</span><span class="o">=</span><span class="s1">'/bin/cat'</span>
-<span class="nb">alias  </span><span class="nv">catln</span><span class="o">=</span><span class="s1">'/bin/bat --paging=never'</span>
-
 <span class="nv">plugins</span><span class="o">=(</span>git
-	zsh-autosuggestions
-	zsh-syntax-highlighting 
+    zsh-autosuggestions
+    zsh-syntax-highlighting 
 <span class="o">)</span>
 
 <span class="nb">source</span> <span class="nv">$ZSH</span>/oh-my-zsh.sh
@@ -422,21 +516,42 @@ ZSH_HIGHLIGHT_STYLES[builtin]<span class="o">=</span><span class="s1">'fg=green,
 <span class="c"># Example aliases</span>
 <span class="c"># alias zshconfig="mate ~/.zshrc"</span>
 <span class="c"># alias ohmyzsh="mate ~/.oh-my-zsh"</span>
+
 <span class="nb">alias ls</span><span class="o">=</span><span class="s1">'lsd'</span>
 <span class="nb">alias </span><span class="nv">l</span><span class="o">=</span><span class="s1">'ls -l'</span>
 <span class="nb">alias </span><span class="nv">la</span><span class="o">=</span><span class="s1">'ls -a'</span>
 <span class="nb">alias </span><span class="nv">lla</span><span class="o">=</span><span class="s1">'ls -la'</span>
 <span class="nb">alias </span><span class="nv">lt</span><span class="o">=</span><span class="s1">'ls --tree'</span>
 
+<span class="nb">alias cat</span><span class="o">=</span><span class="s1">'/bin/bat'</span>
+<span class="nb">alias </span><span class="nv">catn</span><span class="o">=</span><span class="s1">'/bin/cat'</span>
+<span class="nb">alias  </span><span class="nv">catln</span><span class="o">=</span><span class="s1">'/bin/bat --paging=never'</span>
+
 <span class="c"># To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.</span>
 <span class="o">[[</span> <span class="o">!</span> <span class="nt">-f</span> ~/.p10k.zsh <span class="o">]]</span> <span class="o">||</span> <span class="nb">source</span> ~/.p10k.zsh
-
-
-<span class="nb">eval</span> <span class="s2">"</span><span class="si">$(</span>/home/linuxbrew/.linuxbrew/bin/brew shellenv<span class="si">)</span><span class="s2">"</span>
-<span class="c"># Instalar gemas en ~/.gem</span>
-<span class="nb">export </span><span class="nv">GEM_HOME</span><span class="o">=</span><span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/.gem"</span>
-<span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/.gem/bin:</span><span class="nv">$PATH</span><span class="s2">"</span>
 </code></pre></div></div>
+<h1 id="aplicación-para-el-usuario-root">Aplicación para el usuario root</h1>
+<p>Si deseas que estos alias también estén disponibles para el usuario root, puedes seguir los mismos pasos anteriores. Alternativamente, puedes crear un enlace simbólico del archivo .zshrc de tu usuario hacia el directorio del root:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo ln</span> <span class="nt">-s</span> ~/.zshrc /root/.zshrc
+</code></pre></div></div>
+<p>Si encuentras un error al crear el enlace, es posible que ya exista un archivo .zshrc en el directorio del root. En ese caso, puedes eliminar el archivo .zshrc del root y luego intentar nuevamente:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo rm</span> /root/.zshrc 
+</code></pre></div></div>
+<p>Para mejorar la visibilidad y distinguir fácilmente en qué usuario estás, puedes personalizar el color del prompt. Esto se puede lograr editando el archivo <code class="language-plaintext highlighter-rouge">.p10k.zsh</code> de la siguiente manera:</p>
+
+<p align="center">
+<img src="/assets/images/PersonalizacionLinux/root.png" />
+</p>
+
+<p>En el archivo <code class="language-plaintext highlighter-rouge">.p10k.zsh</code>, busca la línea 220, donde por defecto verás el valor <code class="language-plaintext highlighter-rouge">31</code>. Reemplaza este valor con la palabra <code class="language-plaintext highlighter-rouge">red</code>. De manera similar, en la línea 230, sustituye el valor <code class="language-plaintext highlighter-rouge">39</code> también por <code class="language-plaintext highlighter-rouge">red</code>.</p>
+
+<p>Cerrando la terminal o saliendo del usuario root tendríamos de la siguiente manera:</p>
+
+<p align="center">
+<img src="/assets/images/PersonalizacionLinux/root2.png" />
+</p>
 
         
       </section>
@@ -521,6 +636,47 @@ ZSH_HIGHLIGHT_STYLES[builtin]<span class="o">=</span><span class="s1">'fg=green,
   
   <h2 class="page__related-title">Puede que también te interese</h2>
   <div class="grid__wrapper">
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/assets/images/Snake/snake.png"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/python/Snake-Python/" rel="permalink">Clásico juego de snake en python
+</a>
+        
+      
+    </h2>
+
+    <p class="page__meta">
+      
+        <i class="fa fa-fw fa-calendar" aria-hidden="true"></i> <time datetime="2024-08-12T00:00:00-06:00">August 12, 2024 </time>&emsp;
+      
+    </p>
+
+    <p class="archive__item-excerpt" itemprop="description"><img src="assets/images/Snake/snake.png" alt="" style="float: right;margin-right:10px; margin-left:20px; margin-bottom:10px; height:120px;">Revive la nostalgia con Snake, el clásico juego de la serpiente, ahora hecho en Python! 🐍📜 Disfruta de un código simple y adictivo que crece a medida que recoges alimentos. Ideal para aprender y jugar. 🚀🎮
+</p>
+    <i class="fas fa-tags"></i>
+    
+      <a href="/tags/#juegos" class="page__meta btn" rel="tag">juegos</a>
+    
+  </article>
+</div>
+
+
     
       
       
@@ -643,49 +799,6 @@ ZSH_HIGHLIGHT_STYLES[builtin]<span class="o">=</span><span class="s1">'fg=green,
     <i class="fas fa-tags"></i>
     
       <a href="/tags/#puerto 80" class="page__meta btn" rel="tag">puerto 80</a>
-    
-      <a href="/tags/#nmap" class="page__meta btn" rel="tag">nmap</a>
-    
-  </article>
-</div>
-
-
-    
-      
-      
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src=
-          
-            "/assets/images/MaquinaHeadless/headless.png"
-          
-          alt="">
-      </div>
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/hackthebox/Maquina-Headless/" rel="permalink">Máquina Headless de HackTheBox con dificultad fácil
-</a>
-        
-      
-    </h2>
-
-    <p class="page__meta">
-      
-        <i class="fa fa-fw fa-calendar" aria-hidden="true"></i> <time datetime="2024-06-30T00:00:00-06:00">June 30, 2024 </time>&emsp;
-      
-    </p>
-
-    <p class="archive__item-excerpt" itemprop="description"><img src="/assets/images/MaquinaHeadless/headless.png" alt="" style="float: right;margin-right:10px; margin-left:20px; margin-bottom:10px; height:120px;">Abordando el desafío de la máquina Headless en HackTheBox: una intrigante aventura que, aunque aparentemente sencilla, esconde múltiples desafíos y lecciones clave.
-</p>
-    <i class="fas fa-tags"></i>
-    
-      <a href="/tags/#puerto 5000" class="page__meta btn" rel="tag">puerto 5000</a>
     
       <a href="/tags/#nmap" class="page__meta btn" rel="tag">nmap</a>
     

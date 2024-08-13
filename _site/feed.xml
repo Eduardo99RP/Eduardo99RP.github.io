@@ -1,4 +1,94 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-07-30T20:24:42-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">BlogPersonal</title><subtitle>post de proyectos</subtitle><author><name>Eduardo Rivera</name></author><entry><title type="html">Máquina GreenHorn de HackTheBox con dificultad fácil</title><link href="http://localhost:4000/hackthebox/Maquina-GreenHorn/" rel="alternate" type="text/html" title="Máquina GreenHorn de HackTheBox con dificultad fácil" /><published>2024-07-23T00:00:00-06:00</published><updated>2024-07-23T00:00:00-06:00</updated><id>http://localhost:4000/hackthebox/Maquina-GreenHorn</id><content type="html" xml:base="http://localhost:4000/hackthebox/Maquina-GreenHorn/"><![CDATA[<h2 id="próximamente">Próximamente…</h2>]]></content><author><name>Eduardo Rivera</name></author><category term="HackTheBox" /><category term="pixelated" /><category term="pluck 4.7.18" /><summary type="html"><![CDATA[La máquina GreenHorn nos muestra las posibilidades de encontrar contraseñas incluso cuando están ocultas en una imagen. Aunque esta máquina en sí misma no representa un gran desafío, el proceso para descubrir la contraseña resulta ser bastante interesante y educativo.]]></summary></entry><entry><title type="html">Instalación, configuración y personalización de ArchLinux.</title><link href="http://localhost:4000/linux/ArchLinux/" rel="alternate" type="text/html" title="Instalación, configuración y personalización de ArchLinux." /><published>2024-07-19T00:00:00-06:00</published><updated>2024-07-19T00:00:00-06:00</updated><id>http://localhost:4000/linux/ArchLinux</id><content type="html" xml:base="http://localhost:4000/linux/ArchLinux/"><![CDATA[<h2 id="arch-linux">Arch Linux</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-08-12T19:17:52-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">BlogPersonal</title><subtitle>post de proyectos</subtitle><author><name>Eduardo Rivera</name></author><entry><title type="html">Clásico juego de snake en python</title><link href="http://localhost:4000/python/Snake-Python/" rel="alternate" type="text/html" title="Clásico juego de snake en python" /><published>2024-08-12T00:00:00-06:00</published><updated>2024-08-12T00:00:00-06:00</updated><id>http://localhost:4000/python/Snake-Python</id><content type="html" xml:base="http://localhost:4000/python/Snake-Python/"><![CDATA[<h1 id="historia">Historia</h1>
+<p>El juego de la serpiente es uno de los videojuegos más icónicos y conocidos, originalmente popularizado en teléfonos móviles Nokia a finales de los años 90. El objetivo es simple: controlar una serpiente que se mueve por la pantalla, consumiendo comida para crecer, mientras se evita chocar contra las paredes o contra sí misma. Este juego, a pesar de su simplicidad, sigue siendo muy popular y ha sido recreado en innumerables plataformas y lenguajes de programación.</p>
+
+<h1 id="funcionalidad">Funcionalidad</h1>
+<p>Este proyecto recrea el clásico juego de la serpiente usando Python y la biblioteca gráfica Tkinter. La serpiente se mueve dentro de un área de juego definida (un Canvas) y puede cambiar de dirección en respuesta a las teclas de flecha del teclado. Un cuadrado rojo representa la “comida” y aparece en posiciones aleatorias dentro del área de juego. Cuando la serpiente come la comida, su longitud aumenta y la puntuación del jugador se incrementa. El juego termina si la serpiente choca contra sí misma.</p>
+
+<h1 id="explicación-del-código">Explicación del Código</h1>
+<p>Inicialización de la Ventana y Componentes</p>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">SnakeApp</span><span class="p">():</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">root</span><span class="p">):</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">root</span> <span class="o">=</span> <span class="n">root</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">root</span><span class="p">.</span><span class="nf">title</span><span class="p">(</span><span class="sh">"</span><span class="s">Snake</span><span class="sh">"</span><span class="p">)</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">root</span><span class="p">.</span><span class="nf">geometry</span><span class="p">(</span><span class="sh">"</span><span class="s">450x480</span><span class="sh">"</span><span class="p">)</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">root</span><span class="p">.</span><span class="nf">configure</span><span class="p">(</span><span class="n">bg</span><span class="o">=</span><span class="sh">'</span><span class="s">#654321</span><span class="sh">'</span><span class="p">)</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">root</span><span class="p">.</span><span class="nf">resizable</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+</code></pre></div></div>
+<p>Aquí se inicializa la ventana principal del juego. Se establece el tamaño de la ventana, el color de fondo, y se impide que la ventana sea redimensionada.</p>
+
+<h3 id="lienzo-y-etiquetas">Lienzo y Etiquetas</h3>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">self</span><span class="p">.</span><span class="n">canvas</span> <span class="o">=</span> <span class="nc">Canvas</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span> <span class="n">bg</span><span class="o">=</span><span class="sh">'</span><span class="s">black</span><span class="sh">'</span><span class="p">,</span> <span class="n">highlightthickness</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">self</span><span class="p">.</span><span class="n">canvas</span><span class="p">.</span><span class="nf">place</span><span class="p">(</span><span class="n">relx</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">rely</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">anchor</span><span class="o">=</span><span class="n">CENTER</span><span class="p">)</span>
+
+<span class="n">self</span><span class="p">.</span><span class="n">score_label</span> <span class="o">=</span> <span class="nc">Label</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="sh">"</span><span class="s">Puntuación: 0</span><span class="sh">"</span><span class="p">,</span> <span class="n">font</span><span class="o">=</span><span class="p">(</span><span class="sh">"</span><span class="s">Arial</span><span class="sh">"</span><span class="p">,</span> <span class="mi">14</span><span class="p">),</span> <span class="n">bg</span><span class="o">=</span><span class="sh">'</span><span class="s">#654321</span><span class="sh">'</span><span class="p">,</span> <span class="n">fg</span><span class="o">=</span><span class="sh">'</span><span class="s">white</span><span class="sh">'</span><span class="p">)</span>
+<span class="n">self</span><span class="p">.</span><span class="n">score_label</span><span class="p">.</span><span class="nf">place</span><span class="p">(</span><span class="n">relx</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">rely</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span> <span class="n">anchor</span><span class="o">=</span><span class="n">CENTER</span><span class="p">)</span>
+</code></pre></div></div>
+<p>Se crea un Canvas donde se dibujará la serpiente y la comida. Además, se añade una etiqueta para mostrar la puntuación actual del jugador.</p>
+
+<h3 id="configuración-inicial-de-la-serpiente">Configuración Inicial de la Serpiente</h3>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">self</span><span class="p">.</span><span class="n">snake</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">self</span><span class="p">.</span><span class="n">snake_x</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">self</span><span class="p">.</span><span class="n">snake_y</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">self</span><span class="p">.</span><span class="n">direction</span> <span class="o">=</span> <span class="p">{</span><span class="sh">'</span><span class="s">x</span><span class="sh">'</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="sh">'</span><span class="s">y</span><span class="sh">'</span><span class="p">:</span> <span class="mi">0</span><span class="p">}</span>
+<span class="n">self</span><span class="p">.</span><span class="n">initial_length</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">self</span><span class="p">.</span><span class="nf">create_snake</span><span class="p">()</span>
+</code></pre></div></div>
+<p>Se define la posición inicial de la serpiente y su dirección de movimiento. La serpiente comienza con una longitud de 3 segmentos.</p>
+
+<h3 id="movimiento-de-la-serpiente">Movimiento de la Serpiente</h3>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">move</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">self</span><span class="p">.</span><span class="n">game_over</span><span class="p">:</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">snake_x</span> <span class="o">+=</span> <span class="n">self</span><span class="p">.</span><span class="n">direction</span><span class="p">[</span><span class="sh">'</span><span class="s">x</span><span class="sh">'</span><span class="p">]</span> <span class="o">*</span> <span class="n">self</span><span class="p">.</span><span class="n">square_size</span> 
+        <span class="n">self</span><span class="p">.</span><span class="n">snake_y</span> <span class="o">+=</span> <span class="n">self</span><span class="p">.</span><span class="n">direction</span><span class="p">[</span><span class="sh">'</span><span class="s">y</span><span class="sh">'</span><span class="p">]</span> <span class="o">*</span> <span class="n">self</span><span class="p">.</span><span class="n">square_size</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">snake_x</span> <span class="o">%=</span> <span class="mi">400</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">snake_y</span> <span class="o">%=</span> <span class="mi">400</span>
+        <span class="k">if</span> <span class="n">self</span><span class="p">.</span><span class="nf">check_collision</span><span class="p">():</span>
+            <span class="n">self</span><span class="p">.</span><span class="nf">end_game</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="nf">len</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">snake</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+            <span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">y2</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="n">canvas</span><span class="p">.</span><span class="nf">coords</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">snake</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+            <span class="n">self</span><span class="p">.</span><span class="n">canvas</span><span class="p">.</span><span class="nf">coords</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">snake</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">y2</span><span class="p">)</span>
+        <span class="n">x1</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="n">snake_x</span>
+        <span class="n">y1</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="n">snake_y</span>
+        <span class="n">x2</span> <span class="o">=</span> <span class="n">x1</span> <span class="o">+</span> <span class="n">self</span><span class="p">.</span><span class="n">square_size</span>
+        <span class="n">y2</span> <span class="o">=</span> <span class="n">y1</span> <span class="o">+</span> <span class="n">self</span><span class="p">.</span><span class="n">square_size</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">canvas</span><span class="p">.</span><span class="nf">coords</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">snake</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">y2</span><span class="p">)</span>
+        <span class="n">head_coords</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="n">canvas</span><span class="p">.</span><span class="nf">coords</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">snake</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">x1_r</span><span class="p">,</span> <span class="n">y1_r</span><span class="p">,</span> <span class="n">x2_r</span><span class="p">,</span> <span class="n">y2_r</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="n">canvas</span><span class="p">.</span><span class="nf">coords</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">rect_2</span><span class="p">)</span>
+        <span class="nf">if </span><span class="p">(</span><span class="n">head_coords</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">x2_r</span> <span class="ow">and</span> <span class="n">head_coords</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">x1_r</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">head_coords</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">y2_r</span> <span class="ow">and</span> <span class="n">head_coords</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">y1_r</span><span class="p">):</span>
+            <span class="n">self</span><span class="p">.</span><span class="nf">randomize_red_square_position</span><span class="p">()</span>
+            <span class="n">self</span><span class="p">.</span><span class="nf">extend_snake</span><span class="p">()</span>
+            <span class="n">self</span><span class="p">.</span><span class="n">score</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="n">self</span><span class="p">.</span><span class="n">score_label</span><span class="p">.</span><span class="nf">config</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="sa">f</span><span class="sh">"</span><span class="s">Puntuación: </span><span class="si">{</span><span class="n">self</span><span class="p">.</span><span class="n">score</span><span class="si">}</span><span class="sh">"</span><span class="p">)</span>
+    <span class="n">self</span><span class="p">.</span><span class="n">root</span><span class="p">.</span><span class="nf">after</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="n">self</span><span class="p">.</span><span class="n">move</span><span class="p">)</span>
+</code></pre></div></div>
+<p>Este método se ejecuta repetidamente para mover la serpiente en la dirección actual. También verifica si la serpiente ha chocado contra sí misma o si ha comido la comida roja. En caso de que coma, se actualiza la puntuación y se incrementa la longitud de la serpiente.</p>
+
+<h3 id="finalización-del-juego">Finalización del Juego</h3>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">end_game</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">self</span><span class="p">.</span><span class="n">game_over</span><span class="p">:</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">game_over</span> <span class="o">=</span> <span class="bp">True</span>
+        <span class="n">messagebox</span><span class="p">.</span><span class="nf">showinfo</span><span class="p">(</span><span class="sh">"</span><span class="s">Game Over</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">¡Has perdido!</span><span class="se">\n</span><span class="s">Presiona aceptar</span><span class="sh">"</span><span class="p">)</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">game_over</span> <span class="o">=</span> <span class="bp">False</span>
+        <span class="n">self</span><span class="p">.</span><span class="nf">reset_game</span><span class="p">()</span>
+</code></pre></div></div>
+<p>Este método muestra un mensaje de “Game Over” y reinicia el juego si la serpiente choca contra sí misma.</p>
+
+<h3 id="posibles-mejoras">Posibles Mejoras</h3>
+<ul>
+  <li>
+    <p><strong>Incremento de Velocidad</strong>: A medida que la puntuación aumenta, se podría incrementar la velocidad de la serpiente para hacer el juego más desafiante.</p>
+  </li>
+  <li>
+    <p><strong>Obstáculos</strong>: Agregar obstáculos aleatorios en el área de juego para aumentar la dificultad.</p>
+  </li>
+  <li>
+    <p><strong>Sonidos</strong>: Incluir efectos de sonido para las acciones como comer la comida o chocar contra sí misma.
+Mejorar la Aleatorización del Cuadrado Rojo: Actualmente, el cuadrado rojo aparece en posiciones simétricas. Sería mejor permitir que aparezca en cualquier parte del lienzo.</p>
+  </li>
+</ul>
+
+<h3 id="recomendación">Recomendación</h3>
+<p>Este proyecto es un excelente punto de partida para aprender sobre la programación de interfaces gráficas y la lógica de juegos en Python. Se recomienda experimentar con diferentes mejoras para aprender cómo afectan la jugabilidad y la interacción del usuario.</p>]]></content><author><name>Eduardo Rivera</name></author><category term="python" /><category term="juegos" /><summary type="html"><![CDATA[Revive la nostalgia con Snake, el clásico juego de la serpiente, ahora hecho en Python! 🐍📜 Disfruta de un código simple y adictivo que crece a medida que recoges alimentos. Ideal para aprender y jugar. 🚀🎮]]></summary></entry><entry><title type="html">Máquina GreenHorn de HackTheBox con dificultad fácil</title><link href="http://localhost:4000/hackthebox/Maquina-GreenHorn/" rel="alternate" type="text/html" title="Máquina GreenHorn de HackTheBox con dificultad fácil" /><published>2024-07-23T00:00:00-06:00</published><updated>2024-07-23T00:00:00-06:00</updated><id>http://localhost:4000/hackthebox/Maquina-GreenHorn</id><content type="html" xml:base="http://localhost:4000/hackthebox/Maquina-GreenHorn/"><![CDATA[<h2 id="próximamente">Próximamente…</h2>]]></content><author><name>Eduardo Rivera</name></author><category term="HackTheBox" /><category term="pixelated" /><category term="pluck 4.7.18" /><summary type="html"><![CDATA[La máquina GreenHorn nos muestra las posibilidades de encontrar contraseñas incluso cuando están ocultas en una imagen. Aunque esta máquina en sí misma no representa un gran desafío, el proceso para descubrir la contraseña resulta ser bastante interesante y educativo.]]></summary></entry><entry><title type="html">Instalación, configuración y personalización de ArchLinux.</title><link href="http://localhost:4000/linux/ArchLinux/" rel="alternate" type="text/html" title="Instalación, configuración y personalización de ArchLinux." /><published>2024-07-19T00:00:00-06:00</published><updated>2024-07-19T00:00:00-06:00</updated><id>http://localhost:4000/linux/ArchLinux</id><content type="html" xml:base="http://localhost:4000/linux/ArchLinux/"><![CDATA[<h2 id="arch-linux">Arch Linux</h2>
 
 <p style="text-align: justify;">
     <img src="/assets/images/ArchLinux/icons8-arch-linux-480.png" style="float: left; margin: 0 5px 0 0; width: 90px; height: auto;" />
@@ -285,7 +375,7 @@ makepkg <span class="nt">-si</span>
 </code></pre></div></div>
 <p>Para mas detalles de instalación de herramientas para Linux podemos ver el siguiente enlace:</p>
 
-<p><a href="https://eduardo99rp.github.io/linux/ArchLinux/">Personalización de un entorno de trabajo Linux</a></p>]]></content><author><name>Eduardo Rivera</name></author><category term="Linux" /><category term="Linux" /><category term="Personalización" /><summary type="html"><![CDATA[Nos sumergimos en la instalación de Arch Linux, un proceso que puede parecer un gran reto al principio, pero que en realidad es muy sencillo. Además, la personalización del sistema abre un mundo de posibilidades, permitiéndote adaptar cada detalle a tus necesidades y preferencias.]]></summary></entry><entry><title type="html">Máquina PermX de HackTheBox con dificultad fácil</title><link href="http://localhost:4000/hackthebox/permx/" rel="alternate" type="text/html" title="Máquina PermX de HackTheBox con dificultad fácil" /><published>2024-07-12T00:00:00-06:00</published><updated>2024-07-12T00:00:00-06:00</updated><id>http://localhost:4000/hackthebox/permx</id><content type="html" xml:base="http://localhost:4000/hackthebox/permx/"><![CDATA[<h3 id="recocimiento">Recocimiento</h3>
+<p><a href="https://eduardo99rp.github.io/linux/Personalizacion/">Personalización de un entorno de trabajo Linux</a></p>]]></content><author><name>Eduardo Rivera</name></author><category term="Linux" /><category term="Linux" /><category term="Personalización" /><summary type="html"><![CDATA[Nos sumergimos en la instalación de Arch Linux, un proceso que puede parecer un gran reto al principio, pero que en realidad es muy sencillo. Además, la personalización del sistema abre un mundo de posibilidades, permitiéndote adaptar cada detalle a tus necesidades y preferencias.]]></summary></entry><entry><title type="html">Máquina PermX de HackTheBox con dificultad fácil</title><link href="http://localhost:4000/hackthebox/permx/" rel="alternate" type="text/html" title="Máquina PermX de HackTheBox con dificultad fácil" /><published>2024-07-12T00:00:00-06:00</published><updated>2024-07-12T00:00:00-06:00</updated><id>http://localhost:4000/hackthebox/permx</id><content type="html" xml:base="http://localhost:4000/hackthebox/permx/"><![CDATA[<h3 id="recocimiento">Recocimiento</h3>
 <p style="text-align: justify;">
 Esta máquina está clasificada como fácil y no puedo decir lo contrario. Lo primero que se hace es un escaneo usando nmap con la siguiente línea de código:
 </p>
@@ -718,12 +808,20 @@ mtz@permx:~<span class="nv">$ </span><span class="nb">cat</span> /opt/acl.sh
 </ul>
 <p style="text-align: justify;">
     Este comando te cambia al usuario root, dándote acceso completo a todo el sistema.
-</p>]]></content><author><name>Eduardo Rivera</name></author><category term="HackTheBox" /><category term="puerto 80" /><category term="nmap" /><summary type="html"><![CDATA[En esta máquina se abordaron conceptos sencillos pero interesantes. Nos muestra los riesgos asociados al uso de la misma contraseña en múltiples servicios, y nos hace tomar conciencia de lo vulnerables que podemos estar.]]></summary></entry><entry><title type="html">Personalización de un entorno de trabajo Linux.</title><link href="http://localhost:4000/linux/Personalizacion/" rel="alternate" type="text/html" title="Personalización de un entorno de trabajo Linux." /><published>2024-07-09T00:00:00-06:00</published><updated>2024-07-09T00:00:00-06:00</updated><id>http://localhost:4000/linux/Personalizacion</id><content type="html" xml:base="http://localhost:4000/linux/Personalizacion/"><![CDATA[<h1 id="personalización-de-linux">Personalización de Linux</h1>
+</p>]]></content><author><name>Eduardo Rivera</name></author><category term="HackTheBox" /><category term="puerto 80" /><category term="nmap" /><summary type="html"><![CDATA[En esta máquina se abordaron conceptos sencillos pero interesantes. Nos muestra los riesgos asociados al uso de la misma contraseña en múltiples servicios, y nos hace tomar conciencia de lo vulnerables que podemos estar.]]></summary></entry><entry><title type="html">Personalización de un entorno de trabajo Linux.</title><link href="http://localhost:4000/linux/Personalizacion/" rel="alternate" type="text/html" title="Personalización de un entorno de trabajo Linux." /><published>2024-07-09T00:00:00-06:00</published><updated>2024-07-09T00:00:00-06:00</updated><id>http://localhost:4000/linux/Personalizacion</id><content type="html" xml:base="http://localhost:4000/linux/Personalizacion/"><![CDATA[<h1 id="personalización-de-la-terminal">Personalización de la terminal</h1>
 <p>Instalación de  <a href="https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH">ZSH</a> para eso vamos a usar el siguiente comando:</p>
 
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apt <span class="nb">install </span>zsh
-</code></pre></div></div>
-<p>Opcionalmente, se puede instalar <a href="https://ohmyz.sh/">oh-my-zsh</a></p>
+<ul>
+  <li>Debian o Ubuntu
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt <span class="nb">install </span>zsh
+</code></pre></div>    </div>
+  </li>
+  <li>ArchLinux
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt <span class="nt">-S</span> zsh
+</code></pre></div>    </div>
+    <p>Opcionalmente, se puede instalar <a href="https://ohmyz.sh/">oh-my-zsh</a></p>
+  </li>
+</ul>
 
 <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sh <span class="nt">-c</span> <span class="s2">"</span><span class="si">$(</span>curl <span class="nt">-fsSL</span> https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh<span class="si">)</span><span class="s2">"</span>
 </code></pre></div></div>
@@ -735,10 +833,33 @@ mtz@permx:~<span class="nv">$ </span><span class="nb">cat</span> /opt/acl.sh
 <ul>
   <li>Fuentes que se deben instalar:
     <ul>
-      <li><a href="https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf">MesloLGS NF Regular.ttf</a></li>
-      <li><a href="https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf">MesloLGS NF Bold.ttf</a></li>
-      <li><a href="https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf">MesloLGS NF Italic.ttf</a></li>
-      <li><a href="https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf">MesloLGS NF Bold Italic.ttf</a></li>
+      <li><strong>MesloLGS</strong> fuentes que recomienda el autor:
+        <ul>
+          <li><a href="https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf">MesloLGS NF Regular.ttf</a></li>
+          <li><a href="https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf">MesloLGS NF Bold.ttf</a></li>
+          <li><a href="https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf">MesloLGS NF Italic.ttf</a></li>
+          <li><a href="https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf">MesloLGS NF Bold Italic.ttf</a></li>
+        </ul>
+      </li>
+      <li><strong>Hack Nerd Fonts</strong>
+        <ul>
+          <li><a href="https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Hack.zip">Hack Nerd Fonts</a>
+            <ul>
+              <li>Instalación manual funciona en cualquier distribución
+                <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nb">sudo mv </span>Hack.zip /usr/share/fonts
+  <span class="nb">cd</span> /usr/share/fonts
+  <span class="nb">sudo </span>unzip Hack.zip
+  <span class="nb">sudo rm </span>Hack.zip
+</code></pre></div>                </div>
+              </li>
+              <li>Instalación automática en ArchLinux
+                <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yay <span class="nt">-S</span> ttf-hack-nerd
+</code></pre></div>                </div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
     </ul>
   </li>
   <li>Instalación
@@ -765,7 +886,7 @@ mtz@permx:~<span class="nv">$ </span><span class="nb">cat</span> /opt/acl.sh
   </li>
 </ul>
 
-<h2 id="instalación-de-plugins">Instalación de plugins</h2>
+<h1 id="instalación-de-plugins">Instalación de plugins</h1>
 <p>Hay dos plugin muy usados cuáles son:</p>
 <ul>
   <li>zsh-autosuggestions
@@ -785,16 +906,44 @@ mtz@permx:~<span class="nv">$ </span><span class="nb">cat</span> /opt/acl.sh
     zsh-syntax-highlighting 
 <span class="o">)</span>
 </code></pre></div></div>
+<p>Finalmente tendremos la siguiente terminal y nos quedaría de la siguiente manera:</p>
+<p align="center">
+<img src="/assets/images/PersonalizacionLinux/ventana.png" />
+</p>
 
-<h2 id="alias-de-bat">Alias de bat</h2>
+<h1 id="configuración-de-alias">Configuración de alias</h1>
+
+<h3 id="alias-de-bat">Alias de bat</h3>
 <p>En este caso se utiliza la herramienta <a href="https://github.com/sharkdp/bat">bat</a> la cual tiene una función parecida al comando cat, sin embargo, este tiene una presentación más elegante y más visual, por lo cual se opta por modificar el comando cat usando el alias en <code class="language-plaintext highlighter-rouge">.zshrc</code></p>
 
-<p>Para la instalación de esta herramienta se puede instalar con el siguiente comando.</p>
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt <span class="nb">install </span>bat
-</code></pre></div></div>
-<p>o bien se puede descargar la <a href="https://github.com/sharkdp/bat/releases/tag/v0.24.0">última versión</a> para ello se instala de la siguiente manera.</p>
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt <span class="nb">install</span> ./nombre_del_archivo.deb
-</code></pre></div></div>
+<h2 id="instalación-de-la-herramienta">Instalación de la herramienta</h2>
+
+<p>Para la instalación de esta herramienta, se puede usar uno de los siguientes métodos:</p>
+
+<h3 id="en-ubuntudebian">En Ubuntu/Debian:</h3>
+<ol>
+  <li>Instalación mediante el gestor de paquetes:
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nb">sudo </span>apt <span class="nb">install </span>bat
+</code></pre></div>    </div>
+  </li>
+  <li>Instalación manual descargando la <a href="https://github.com/sharkdp/bat/releases/tag/v0.24.0">última versión</a>:
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nb">sudo </span>apt <span class="nb">install</span> ./nombre_del_archivo.deb
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<h3 id="en-arch-linux">En Arch Linux:</h3>
+<ol>
+  <li>Instalación mediante el gestor de paquetes <code class="language-plaintext highlighter-rouge">pacman</code>:
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nb">sudo </span>pacman <span class="nt">-S</span> bat
+</code></pre></div>    </div>
+  </li>
+  <li>Instalación manual desde el AUR utilizando un ayudante como <code class="language-plaintext highlighter-rouge">yay</code>:
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code> yay <span class="nt">-S</span> bat
+</code></pre></div>    </div>
+  </li>
+</ol>
+
 <p>Dentro del archivo <code class="language-plaintext highlighter-rouge">.zshrc</code> se agrega el siguiente alias:</p>
 <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">alias cat</span><span class="o">=</span><span class="s1">'/bin/bat'</span>
 <span class="nb">alias </span><span class="nv">catn</span><span class="o">=</span><span class="s1">'/bin/cat'</span>
@@ -809,34 +958,69 @@ mtz@permx:~<span class="nv">$ </span><span class="nb">cat</span> /opt/acl.sh
 <img src="/assets/images/PersonalizacionLinux/batcat2.png" />
 </p>
 
-<h2 id="alias-de-lsb">Alias de lsb</h2>
+<h3 id="alias-de-lsd">Alias de lsd</h3>
 
+<p><code class="language-plaintext highlighter-rouge">lsd</code> es una versión mejorada del comando <code class="language-plaintext highlighter-rouge">ls</code>, que incluye colores y otros elementos visuales para mejorar la experiencia de usuario. A continuación, se presentan alias que puedes agregar a tu archivo <code class="language-plaintext highlighter-rouge">.zshrc</code> para sustituir el uso de <code class="language-plaintext highlighter-rouge">ls</code> por <code class="language-plaintext highlighter-rouge">lsd</code>:</p>
+
+<h2 id="instalación-de-la-herramienta-1">Instalación de la herramienta</h2>
+
+<h3 id="en-ubuntudebian-1">En Ubuntu/Debian:</h3>
+<ol>
+  <li>Instalación mediante el gestor de paquetes:
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nb">sudo </span>apt <span class="nb">install </span>lsd
+</code></pre></div>    </div>
+  </li>
+  <li>Instalación manual descargando la <a href="https://github.com/Peltoche/lsd/releases">última versión</a>:
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nb">sudo </span>dpkg <span class="nt">-i</span> ./nombre_del_archivo.deb
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<h3 id="en-arch-linux-1">En Arch Linux:</h3>
+<ol>
+  <li>Instalación mediante el gestor de paquetes <code class="language-plaintext highlighter-rouge">pacman</code>:
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nb">sudo </span>pacman <span class="nt">-S</span> lsd
+</code></pre></div>    </div>
+  </li>
+  <li>Instalación manual desde el AUR utilizando un ayudante como <code class="language-plaintext highlighter-rouge">yay</code>:
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code> yay <span class="nt">-S</span> lsd
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<p>Dentro del archivo <code class="language-plaintext highlighter-rouge">.zshrc</code> se agregan los siguientes alias:</p>
 <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">alias ls</span><span class="o">=</span><span class="s1">'lsd'</span>
 <span class="nb">alias </span><span class="nv">l</span><span class="o">=</span><span class="s1">'ls -l'</span>
 <span class="nb">alias </span><span class="nv">la</span><span class="o">=</span><span class="s1">'ls -a'</span>
 <span class="nb">alias </span><span class="nv">lla</span><span class="o">=</span><span class="s1">'ls -la'</span>
 <span class="nb">alias </span><span class="nv">lt</span><span class="o">=</span><span class="s1">'ls --tree'</span>
-</code></pre></div></div>
 
-<h2 id="configuración-personal-de-zshrc">Configuración personal de .zshrc</h2>
+</code></pre></div></div>
+<p>Así es como se ve nuestra terminal usando esta herramienta:</p>
+
+<p align="center">
+<img src="/assets/images/PersonalizacionLinux/carpetas.png" />
+</p>
+
+<p align="center">
+<img src="/assets/images/PersonalizacionLinux/l.png" />
+</p>
+
+<h1 id="configuración-de-zshrc">Configuración de .zshrc</h1>
+<p>Esta es la configuración final <code class="language-plaintext highlighter-rouge">.zshrc</code></p>
 
 <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 <span class="k">if</span> <span class="o">[[</span> <span class="nt">-r</span> <span class="s2">"</span><span class="k">${</span><span class="nv">XDG_CACHE_HOME</span><span class="k">:-</span><span class="nv">$HOME</span><span class="p">/.cache</span><span class="k">}</span><span class="s2">/p10k-instant-prompt-</span><span class="k">${</span><span class="p">(%)</span><span class="k">:-</span><span class="p">%n</span><span class="k">}</span><span class="s2">.zsh"</span> <span class="o">]]</span><span class="p">;</span> <span class="k">then
   </span><span class="nb">source</span> <span class="s2">"</span><span class="k">${</span><span class="nv">XDG_CACHE_HOME</span><span class="k">:-</span><span class="nv">$HOME</span><span class="p">/.cache</span><span class="k">}</span><span class="s2">/p10k-instant-prompt-</span><span class="k">${</span><span class="p">(%)</span><span class="k">:-</span><span class="p">%n</span><span class="k">}</span><span class="s2">.zsh"</span>
-<span class="k">fi
+<span class="k">fi</span>
 
-</span><span class="nb">export </span><span class="nv">ZSH</span><span class="o">=</span><span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/.oh-my-zsh"</span>
+<span class="c"># Path to your Oh My Zsh installation.</span>
+<span class="nb">export </span><span class="nv">ZSH</span><span class="o">=</span><span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/.oh-my-zsh"</span>
 
 <span class="nv">ZSH_THEME</span><span class="o">=</span><span class="s2">"powerlevel10k/powerlevel10k"</span>
-
-<span class="c">#alias </span>
-<span class="nb">alias cat</span><span class="o">=</span><span class="s1">'/bin/bat'</span>
-<span class="nb">alias </span><span class="nv">catn</span><span class="o">=</span><span class="s1">'/bin/cat'</span>
-<span class="nb">alias  </span><span class="nv">catln</span><span class="o">=</span><span class="s1">'/bin/bat --paging=never'</span>
-
 <span class="nv">plugins</span><span class="o">=(</span>git
-	zsh-autosuggestions
-	zsh-syntax-highlighting 
+    zsh-autosuggestions
+    zsh-syntax-highlighting 
 <span class="o">)</span>
 
 <span class="nb">source</span> <span class="nv">$ZSH</span>/oh-my-zsh.sh
@@ -849,21 +1033,42 @@ ZSH_HIGHLIGHT_STYLES[builtin]<span class="o">=</span><span class="s1">'fg=green,
 <span class="c"># Example aliases</span>
 <span class="c"># alias zshconfig="mate ~/.zshrc"</span>
 <span class="c"># alias ohmyzsh="mate ~/.oh-my-zsh"</span>
+
 <span class="nb">alias ls</span><span class="o">=</span><span class="s1">'lsd'</span>
 <span class="nb">alias </span><span class="nv">l</span><span class="o">=</span><span class="s1">'ls -l'</span>
 <span class="nb">alias </span><span class="nv">la</span><span class="o">=</span><span class="s1">'ls -a'</span>
 <span class="nb">alias </span><span class="nv">lla</span><span class="o">=</span><span class="s1">'ls -la'</span>
 <span class="nb">alias </span><span class="nv">lt</span><span class="o">=</span><span class="s1">'ls --tree'</span>
 
+<span class="nb">alias cat</span><span class="o">=</span><span class="s1">'/bin/bat'</span>
+<span class="nb">alias </span><span class="nv">catn</span><span class="o">=</span><span class="s1">'/bin/cat'</span>
+<span class="nb">alias  </span><span class="nv">catln</span><span class="o">=</span><span class="s1">'/bin/bat --paging=never'</span>
+
 <span class="c"># To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.</span>
 <span class="o">[[</span> <span class="o">!</span> <span class="nt">-f</span> ~/.p10k.zsh <span class="o">]]</span> <span class="o">||</span> <span class="nb">source</span> ~/.p10k.zsh
+</code></pre></div></div>
+<h1 id="aplicación-para-el-usuario-root">Aplicación para el usuario root</h1>
+<p>Si deseas que estos alias también estén disponibles para el usuario root, puedes seguir los mismos pasos anteriores. Alternativamente, puedes crear un enlace simbólico del archivo .zshrc de tu usuario hacia el directorio del root:</p>
 
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo ln</span> <span class="nt">-s</span> ~/.zshrc /root/.zshrc
+</code></pre></div></div>
+<p>Si encuentras un error al crear el enlace, es posible que ya exista un archivo .zshrc en el directorio del root. En ese caso, puedes eliminar el archivo .zshrc del root y luego intentar nuevamente:</p>
 
-<span class="nb">eval</span> <span class="s2">"</span><span class="si">$(</span>/home/linuxbrew/.linuxbrew/bin/brew shellenv<span class="si">)</span><span class="s2">"</span>
-<span class="c"># Instalar gemas en ~/.gem</span>
-<span class="nb">export </span><span class="nv">GEM_HOME</span><span class="o">=</span><span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/.gem"</span>
-<span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/.gem/bin:</span><span class="nv">$PATH</span><span class="s2">"</span>
-</code></pre></div></div>]]></content><author><name>Eduardo Rivera</name></author><category term="Linux" /><category term="Linux" /><category term="Personalización" /><summary type="html"><![CDATA[En este post es mi personalización personal de un sistema operativo Linux de las herramientas más usadas y las más cómodas.]]></summary></entry><entry><title type="html">Máquina Headless de HackTheBox con dificultad fácil</title><link href="http://localhost:4000/hackthebox/Maquina-Headless/" rel="alternate" type="text/html" title="Máquina Headless de HackTheBox con dificultad fácil" /><published>2024-06-30T00:00:00-06:00</published><updated>2024-06-30T00:00:00-06:00</updated><id>http://localhost:4000/hackthebox/Maquina-Headless</id><content type="html" xml:base="http://localhost:4000/hackthebox/Maquina-Headless/"><![CDATA[<p align="center">
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo rm</span> /root/.zshrc 
+</code></pre></div></div>
+<p>Para mejorar la visibilidad y distinguir fácilmente en qué usuario estás, puedes personalizar el color del prompt. Esto se puede lograr editando el archivo <code class="language-plaintext highlighter-rouge">.p10k.zsh</code> de la siguiente manera:</p>
+
+<p align="center">
+<img src="/assets/images/PersonalizacionLinux/root.png" />
+</p>
+
+<p>En el archivo <code class="language-plaintext highlighter-rouge">.p10k.zsh</code>, busca la línea 220, donde por defecto verás el valor <code class="language-plaintext highlighter-rouge">31</code>. Reemplaza este valor con la palabra <code class="language-plaintext highlighter-rouge">red</code>. De manera similar, en la línea 230, sustituye el valor <code class="language-plaintext highlighter-rouge">39</code> también por <code class="language-plaintext highlighter-rouge">red</code>.</p>
+
+<p>Cerrando la terminal o saliendo del usuario root tendríamos de la siguiente manera:</p>
+
+<p align="center">
+<img src="/assets/images/PersonalizacionLinux/root2.png" />
+</p>]]></content><author><name>Eduardo Rivera</name></author><category term="Linux" /><category term="Linux" /><category term="Personalización" /><summary type="html"><![CDATA[En este post es mi personalización personal de un sistema operativo Linux de las herramientas más usadas y las más cómodas.]]></summary></entry><entry><title type="html">Máquina Headless de HackTheBox con dificultad fácil</title><link href="http://localhost:4000/hackthebox/Maquina-Headless/" rel="alternate" type="text/html" title="Máquina Headless de HackTheBox con dificultad fácil" /><published>2024-06-30T00:00:00-06:00</published><updated>2024-06-30T00:00:00-06:00</updated><id>http://localhost:4000/hackthebox/Maquina-Headless</id><content type="html" xml:base="http://localhost:4000/hackthebox/Maquina-Headless/"><![CDATA[<p align="center">
 <img src="/assets/images/MaquinaHeadless/Aspose.Words.c51fa9d9-6a10-477b-b35c-8f7240e81596.001.png" />
 </p>
 
