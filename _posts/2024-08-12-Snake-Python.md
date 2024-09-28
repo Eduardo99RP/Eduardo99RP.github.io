@@ -90,6 +90,7 @@ def end_game(self):
         self.game_over = False
         self.reset_game()
 ```
+
 Este método muestra un mensaje de "Game Over" y reinicia el juego si la serpiente choca contra sí misma.
 
 ### Posibles Mejoras
@@ -102,3 +103,5 @@ Mejorar la Aleatorización del Cuadrado Rojo: Actualmente, el cuadrado rojo apar
 
 ### Recomendación
 Este proyecto es un excelente punto de partida para aprender sobre la programación de interfaces gráficas y la lógica de juegos en Python. Se recomienda experimentar con diferentes mejoras para aprender cómo afectan la jugabilidad y la interacción del usuario.
+
+
