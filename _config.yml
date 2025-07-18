@@ -114,7 +114,7 @@ analytics:
 # Site Author
 author:
   name             : "Eduardo Rivera"
-  avatar           : "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/images/avatar.png"
   bio              : "Ingeniero en computacion "
   links:
     - label: "Mi blog"
